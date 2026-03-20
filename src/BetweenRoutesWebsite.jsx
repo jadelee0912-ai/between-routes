@@ -295,7 +295,7 @@ export default function BetweenRoutesWebsite() {
 
           <form
             className="rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm"
-            action="mailto:hello@betweenroutes.com"
+            action="https://formspree.io/f/meerderw"
             method="post"
             encType="text/plain"
           >
