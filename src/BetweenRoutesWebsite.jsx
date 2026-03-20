@@ -1,3 +1,4 @@
+import { useState } from "react";
 export default function BetweenRoutesWebsite() {
   const services = [
     {
@@ -74,7 +75,46 @@ export default function BetweenRoutesWebsite() {
       desc: "With practical coordination before and during the experience.",
     },
   ];
+  const [status, setStatus] = useState("");
 
+  const handleSubmit = async (e) => {
+   e.preventDefault();
+   setStatus("Sending...");
+
+   const form = e.target;
+   const formData = new FormData(form);
+
+   const data = {
+    name: formData.get("name"),
+    company: formData.get("company"),
+    email: formData.get("email"),
+    whatsapp: formData.get("whatsapp"),
+    objective: formData.get("objective"),
+    cities: formData.get("cities"),
+    timing: formData.get("timing"),
+    details: formData.get("details"),
+  };
+
+  try {
+    const response = await fetch("https://formspree.io/f/meerderw", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (response.ok) {
+      setStatus("Thanks — your inquiry has been sent.");
+      form.reset();
+    } else {
+      setStatus("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    setStatus("Something went wrong. Please try again.");
+  }
+};
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900">
       <section className="relative overflow-hidden">
@@ -295,9 +335,7 @@ export default function BetweenRoutesWebsite() {
 
           <form
             className="rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm"
-            action="https://formspree.io/f/meerderw"
-            method="post"
-            encType="text/plain"
+            onSubmit={handleSubmit}
           >
             <div className="grid gap-5 md:grid-cols-2">
               <div>
@@ -398,6 +436,10 @@ export default function BetweenRoutesWebsite() {
             >
               Send Inquiry
             </button>
+
+           {status && (
+             <p className="mt-4 text-sm text-stone-600">{status}</p>
+        )}
           </form>
         </div>
       </section>
