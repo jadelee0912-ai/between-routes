@@ -54,16 +54,25 @@ export default function BespokeExperiencesPage() {
           }}
         />
         <div className="absolute inset-0 bg-black/50" />
+        <div className="relative mx-auto max-w-7xl px-2 py-6 text-white">
+                    <div className="relative z-20 w-full">
+  <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
 
-        <div className="relative mx-auto max-w-7xl px-6 py-8 text-white">
-          <header className="flex items-center justify-between">
-            <Link to="/" className="text-xl font-semibold uppercase tracking-[0.18em]">
-              Between Routes
-            </Link>
-            <Link to="/" className="text-sm text-white/85 hover:text-white">
-              Back to Home
-            </Link>
-          </header>
+    <Link to="/" className="flex items-center -ml-8">
+      <img
+        src="/logo-white.png"
+        alt="Between Routes"
+        className="h-30 md:h-32 w-auto object-contain"
+      />
+    </Link>
+
+    <Link to="/" className="text-sm text-white/85 hover:text-white">
+      Back to Home
+    </Link>
+
+  </div>
+</div>
+
 
           <div className="py-20 md:py-28">
             <div className="max-w-3xl">

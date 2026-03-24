@@ -126,6 +126,27 @@ export default function BetweenRoutesWebsite() {
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900">
       <section className="relative overflow-hidden">
+          <div className="relative z-20 w-full">
+    <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+      
+      <Link to="/" className="flex items-center">
+        <img
+          src="/logo-white.png"
+          alt="Between Routes"
+          className="h-30 md:h-32 w-auto object-contain"
+        />
+      </Link>
+
+      <nav className="hidden md:flex gap-8 text-sm text-white/85">
+        <a href="#services" className="hover:text-white">Services</a>
+        <a href="#journeys" className="hover:text-white">Journeys</a>
+        <a href="#approach" className="hover:text-white">Approach</a>
+        <a href="#about" className="hover:text-white">About</a>
+        <a href="#contact" className="hover:text-white">Contact</a>
+      </nav>
+
+    </div>
+  </div>
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -136,24 +157,6 @@ export default function BetweenRoutesWebsite() {
         <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative mx-auto max-w-7xl px-6 py-8 text-white">
-          <header className="flex items-center justify-between">
-            <Link to="/" className="block">
-              <div className="text-xl font-semibold uppercase tracking-[0.18em]">
-                Between Routes
-              </div>
-              <div className="mt-1 text-sm text-white/80">
-                Tailored China Experiences for Culture & Business
-              </div>
-            </Link>
-
-            <nav className="hidden gap-8 text-sm text-white/85 md:flex">
-              <a href="#services" className="hover:text-white">Services</a>
-              <a href="#journeys" className="hover:text-white">Journeys</a>
-              <a href="#approach" className="hover:text-white">Approach</a>
-              <a href="#about" className="hover:text-white">About</a>
-              <a href="#contact" className="hover:text-white">Contact</a>
-            </nav>
-          </header>
 
           <div className="grid gap-12 py-20 md:grid-cols-[1.1fr_0.9fr] md:py-28">
             <div className="max-w-2xl">
