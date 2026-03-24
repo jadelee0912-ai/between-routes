@@ -1,0 +1,184 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+export default function TailorMadeTravelPage() {
+  const [status, setStatus] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get("name"),
+      company: formData.get("company"),
+      email: formData.get("email"),
+      whatsapp: formData.get("whatsapp"),
+      objective: "Tailor-made China travel",
+      cities: formData.get("cities"),
+      timing: formData.get("timing"),
+      details: formData.get("details"),
+    };
+
+    try {
+      const response = await fetch("https://formspree.io/f/meerderw", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus("Thanks — your inquiry has been sent.");
+        form.reset();
+      } else {
+        setStatus("Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("Something went wrong. Please try again.");
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-stone-50 text-stone-900">
+      <section className="relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1800&q=80')",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/45" />
+
+        <div className="relative mx-auto max-w-7xl px-6 py-8 text-white">
+          <header className="flex items-center justify-between">
+            <Link to="/" className="text-xl font-semibold uppercase tracking-[0.18em]">
+              Between Routes
+            </Link>
+            <Link to="/" className="text-sm text-white/85 hover:text-white">
+              Back to Home
+            </Link>
+          </header>
+
+          <div className="py-20 md:py-28">
+            <div className="max-w-3xl">
+              <div className="mb-5 inline-flex rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.16em] text-white/90 backdrop-blur">
+                Tailor-made China Travel
+              </div>
+              <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+                China travel built around the way you want to move.
+              </h1>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-white/85 md:text-lg">
+                Not a fixed tour, not a generic itinerary — but a route designed around your interests, pacing, priorities, and purpose.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="grid gap-10 md:grid-cols-2">
+          <div>
+            <div className="text-sm uppercase tracking-[0.18em] text-stone-500">How it works</div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+              More personal than a package.
+            </h2>
+          </div>
+          <div className="space-y-5 text-base leading-8 text-stone-700">
+            <p>Tailor-made travel starts with the traveler. We begin with your interests, timing, cities, comfort level, and the kind of experience you want to have.</p>
+            <p>Some routes lean into culture, some into food, some into nature or modern cities. Some move slowly; others are tightly structured around meetings or multiple destinations.</p>
+            <p>The point is not to fit you into a template, but to design a route that actually makes sense for you.</p>
+          </div>
+        </div>
+
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
+          {[
+            "Flexible pacing and city combinations",
+            "Travel shaped around your interests and goals",
+            "A more considered route, not a one-size-fits-all package",
+          ].map((item) => (
+            <div key={item} className="rounded-[28px] border border-stone-200 bg-white p-8 shadow-sm">
+              <p className="text-base leading-8 text-stone-700">{item}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="border-y border-stone-200 bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-20">
+          <div className="max-w-2xl">
+            <div className="text-sm uppercase tracking-[0.18em] text-stone-500">Travel styles</div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+              Different rhythms, different routes.
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "Culture-led Travel",
+                desc: "Built around tea, heritage, design, food, local traditions, and slower immersion.",
+              },
+              {
+                title: "City & Modern China Routes",
+                desc: "For travelers interested in design, innovation, architecture, and urban culture.",
+              },
+              {
+                title: "Mixed-purpose Journeys",
+                desc: "Routes that combine travel, learning, meetings, sourcing, or other specific goals.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="rounded-[28px] border border-stone-200 bg-stone-50 p-8">
+                <h3 className="text-xl font-medium">{item.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-stone-700">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-start">
+          <div>
+            <div className="text-sm uppercase tracking-[0.18em] text-stone-500">Start Your Journey</div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
+              Tell us how you want to travel through China.
+            </h2>
+            <p className="mt-5 max-w-lg text-base leading-8 text-stone-700 md:text-lg">
+              Share your interests, cities, and timing, and we’ll shape the right next step.
+            </p>
+          </div>
+
+          <form className="rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm" onSubmit={handleSubmit}>
+            <div className="grid gap-5 md:grid-cols-2">
+              <input type="text" name="name" placeholder="Name" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+              <input type="text" name="company" placeholder="Company" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+              <input type="email" name="email" placeholder="Email" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+              <input type="text" name="whatsapp" placeholder="WhatsApp" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+            </div>
+
+            <div className="mt-5 grid gap-5 md:grid-cols-2">
+              <input type="text" name="cities" placeholder="Preferred cities" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+              <input type="text" name="timing" placeholder="Dates / timeframe" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+            </div>
+
+            <div className="mt-5">
+              <textarea name="details" rows={5} placeholder="Tell us more about your ideal route" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+            </div>
+
+            <button type="submit" className="mt-6 rounded-2xl bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5">
+              Start Your Journey
+            </button>
+
+            {status && <p className="mt-4 text-sm text-stone-600">{status}</p>}
+          </form>
+        </div>
+      </section>
+    </div>
+  );
+}
