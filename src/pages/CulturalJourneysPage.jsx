@@ -49,10 +49,29 @@ export default function CulturalJourneysPage() {
       <Helmet>
         <title>Cultural Journeys in China – Tea, Heritage & Local Experiences | Between Routes</title>
         <meta name="description" content="Explore China through tea culture, traditional medicine, craft, and heritage. Tailor-made cultural journeys in China designed around depth, not checklists." />
+        <meta name="keywords" content="China cultural travel, tea tour China, Chinese heritage journey, traditional medicine China, cultural immersion China, Yunnan travel, Hangzhou tea culture, China craft tour, slow travel China" />
         <link rel="canonical" href="https://www.betweenrouteschina.com/china-cultural-journeys" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="Cultural Journeys in China – Tea, Heritage & Local Experiences | Between Routes" />
         <meta property="og:description" content="Explore China through tea culture, traditional medicine, craft, and heritage. Tailor-made cultural journeys designed around depth, not checklists." />
         <meta property="og:url" content="https://www.betweenrouteschina.com/china-cultural-journeys" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1200&q=80" />
+        <meta property="og:site_name" content="Between Routes" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cultural Journeys in China – Tea, Heritage & Local Experiences" />
+        <meta name="twitter:description" content="Explore China through tea culture, traditional medicine, craft, and heritage. Tailor-made cultural journeys designed around depth." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1200&q=80" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            "name": "Between Routes",
+            "url": "https://www.betweenrouteschina.com/china-cultural-journeys",
+            "description": "Explore China through tea culture, traditional medicine, craft, and heritage. Tailor-made cultural journeys in China designed around depth, not checklists.",
+            "areaServed": "China",
+            "serviceType": ["Cultural Journeys", "Tea Tours", "Heritage Travel", "Traditional Medicine Tours"]
+          }
+        `}</script>
       </Helmet>
 
       <section className="relative overflow-hidden">

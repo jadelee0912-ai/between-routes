@@ -1,8 +1,28 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
+function useReveal() {
+  useEffect(() => {
+    const els = document.querySelectorAll(".reveal");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("visible");
+            observer.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12 }
+    );
+    els.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+}
+
 export default function BetweenRoutesWebsite() {
+  useReveal();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const services = [
@@ -24,7 +44,7 @@ export default function BetweenRoutesWebsite() {
       title: "Tailor-made China Travel",
       desc: "Every journey is designed around your interests, pace, priorities, and purpose — with no fixed itineraries.",
       image:
-        "https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1600&q=80",
+        "https://images.unsplash.com/photo-1758685292395-af2ea08b4718?auto=format&fit=crop&w=1600&q=80",
       link: "/tailor-made-china-travel",
     },
     {
@@ -43,6 +63,7 @@ export default function BetweenRoutesWebsite() {
       desc: "A slower journey through tea, landscape, and local craft.",
       image:
         "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80",
+      link: "/china-cultural-journeys",
     },
     {
       title: "Wellness & Chinese Wisdom",
@@ -50,6 +71,7 @@ export default function BetweenRoutesWebsite() {
       desc: "A softer way into Chinese wellness, movement, and daily rituals.",
       image:
         "https://images.unsplash.com/photo-1519275964328-32bcddd755f6?auto=format&fit=crop&w=1200&q=80",
+      link: "/china-cultural-journeys",
     },
     {
       title: "Modern China for Curious Minds",
@@ -57,6 +79,7 @@ export default function BetweenRoutesWebsite() {
       desc: "Design, innovation, manufacturing, and urban culture in one route.",
       image:
         "https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&w=1600&q=80",
+      link: "/tailor-made-china-travel",
     },
     {
       title: "Business Routes with Purpose",
@@ -64,6 +87,7 @@ export default function BetweenRoutesWebsite() {
       desc: "Focused trips for buyers, founders, and teams with clear business goals.",
       image:
         "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80",
+      link: "/china-business-visits",
     },
   ];
 
@@ -90,10 +114,8 @@ export default function BetweenRoutesWebsite() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
-
     const form = e.target;
     const formData = new FormData(form);
-
     const data = {
       name: formData.get("name"),
       company: formData.get("company"),
@@ -104,24 +126,15 @@ export default function BetweenRoutesWebsite() {
       timing: formData.get("timing"),
       details: formData.get("details"),
     };
-
     try {
       const response = await fetch("https://formspree.io/f/meerderw", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(data),
       });
-
-      if (response.ok) {
-        setStatus("Thanks — your inquiry has been sent.");
-        form.reset();
-      } else {
-        setStatus("Something went wrong. Please try again.");
-      }
-    } catch (error) {
+      if (response.ok) { setStatus("Thanks — your inquiry has been sent."); form.reset(); }
+      else { setStatus("Something went wrong. Please try again."); }
+    } catch {
       setStatus("Something went wrong. Please try again.");
     }
   };
@@ -142,25 +155,21 @@ export default function BetweenRoutesWebsite() {
         <div className="relative z-20 w-full">
           <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
             <Link to="/" className="flex items-center">
-              <img
-                src="/logo-white.png"
-                alt="Between Routes"
-                className="h-30 md:h-32 w-auto object-contain"
-              />
+              <img src="/logo-white.png" alt="Between Routes" className="h-30 md:h-32 w-auto object-contain" />
             </Link>
 
             {/* Desktop nav */}
             <nav className="hidden md:flex gap-8 text-sm text-white/85">
-              <a href="#services" className="hover:text-white">Services</a>
-              <a href="#journeys" className="hover:text-white">Journeys</a>
-              <a href="#approach" className="hover:text-white">Approach</a>
-              <a href="#about" className="hover:text-white">About</a>
-              <a href="#contact" className="hover:text-white">Contact</a>
+              <a href="#services" className="hover:text-white transition">Services</a>
+              <a href="#journeys" className="hover:text-white transition">Journeys</a>
+              <a href="#approach" className="hover:text-white transition">Approach</a>
+              <a href="#about" className="hover:text-white transition">About</a>
+              <a href="#contact" className="hover:text-white transition">Contact</a>
             </nav>
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden flex flex-col gap-1.5 p-2 text-white"
+              className="md:hidden flex p-2 text-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -192,10 +201,7 @@ export default function BetweenRoutesWebsite() {
 
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1800&q=80')",
-          }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1800&q=80')" }}
         />
         <div className="absolute inset-0 bg-black/40" />
 
@@ -212,30 +218,32 @@ export default function BetweenRoutesWebsite() {
                 From cultural immersion and business visits to tailor-made travel and bespoke experiences, we design more thoughtful ways into China.
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="#contact"
-                  className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-900 shadow-sm transition hover:-translate-y-0.5"
-                >
+                <a href="#contact" className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-900 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
                   Start Your Journey
                 </a>
-                <a
-                  href="#journeys"
-                  className="rounded-2xl border border-white/30 bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur transition hover:-translate-y-0.5"
-                >
+                <a href="#journeys" className="rounded-2xl border border-white/30 bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur transition hover:-translate-y-0.5">
                   Explore Journeys
                 </a>
               </div>
             </div>
+          </div>
+
+          {/* Scroll-down indicator */}
+          <div className="pb-8 flex justify-center">
+            <a href="#services" className="flex flex-col items-center gap-1.5 text-white/50 hover:text-white/80 transition group">
+              <span className="text-xs uppercase tracking-widest">Explore</span>
+              <svg className="animate-bounce" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>
 
       {/* Services */}
       <section id="services" className="mx-auto max-w-7xl px-6 py-20 md:py-24">
-        <div className="max-w-2xl">
-          <div className="text-sm uppercase tracking-[0.18em] text-stone-500">
-            Services
-          </div>
+        <div className="max-w-2xl reveal">
+          <div className="text-sm uppercase tracking-[0.18em] text-stone-500">Services</div>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
             Different ways into China, depending on what you need.
           </h2>
@@ -244,88 +252,98 @@ export default function BetweenRoutesWebsite() {
           </p>
         </div>
 
-        <div className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
-          {services.map((item) => (
-            <Link
-              key={item.title}
-              to={item.link}
-              className="group relative min-w-[300px] max-w-[300px] snap-start overflow-hidden rounded-[28px] border border-stone-200 bg-white shadow-sm md:min-w-[340px] md:max-w-[340px]"
-            >
-              <div
-                className="h-56 bg-cover bg-center transition duration-500 group-hover:scale-105"
-                style={{ backgroundImage: `url(${item.image})` }}
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-medium">{item.title}</h3>
-                <p className="mt-3 text-sm leading-7 text-stone-700">{item.desc}</p>
-              </div>
-            </Link>
-          ))}
+        <div className="relative mt-12">
+          <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
+            {services.map((item) => (
+              <Link
+                key={item.title}
+                to={item.link}
+                className="group relative min-w-[300px] max-w-[300px] snap-start overflow-hidden rounded-[28px] border border-stone-200 bg-white shadow-sm md:min-w-[340px] md:max-w-[340px] transition hover:shadow-md hover:-translate-y-1 duration-300"
+              >
+                <div
+                  className="h-56 bg-cover bg-center transition duration-500 group-hover:scale-105"
+                  style={{ backgroundImage: `url(${item.image})` }}
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-medium">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-7 text-stone-700">{item.desc}</p>
+                  <div className="mt-4 flex items-center gap-1 text-sm font-medium text-stone-900 group-hover:gap-2 transition-all">
+                    Explore
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          {/* Gradient scroll hint */}
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-stone-50 to-transparent" />
         </div>
       </section>
 
       {/* Journeys */}
       <section id="journeys" className="border-y border-stone-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between reveal">
             <div className="max-w-2xl">
-              <div className="text-sm uppercase tracking-[0.18em] text-stone-500">
-                Starting Points
-              </div>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-                A few ways to begin.
-              </h2>
+              <div className="text-sm uppercase tracking-[0.18em] text-stone-500">Starting Points</div>
+              <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">A few ways to begin.</h2>
             </div>
             <p className="max-w-xl text-sm leading-7 text-stone-700 md:text-base">
               These are examples, not fixed packages. Every route can be adapted.
             </p>
           </div>
 
-          <div className="mt-12 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
-            {journeys.map((item) => (
-              <div
-                key={item.title}
-                className="group relative min-w-[320px] max-w-[320px] snap-start overflow-hidden rounded-[30px] border border-stone-200 bg-white shadow-sm md:min-w-[420px] md:max-w-[420px]"
-              >
-                <div
-                  className="relative h-[420px] bg-cover bg-center transition duration-500 group-hover:scale-105"
-                  style={{ backgroundImage: `url(${item.image})` }}
+          <div className="relative mt-12">
+            <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4">
+              {journeys.map((item) => (
+                <Link
+                  key={item.title}
+                  to={item.link}
+                  className="group relative min-w-[320px] max-w-[320px] snap-start overflow-hidden rounded-[30px] border border-stone-200 bg-white shadow-sm md:min-w-[420px] md:max-w-[420px] transition hover:shadow-md hover:-translate-y-1 duration-300"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                    <div className="text-xs uppercase tracking-[0.16em] text-white/70">
-                      {item.place}
+                  <div
+                    className="relative h-[420px] bg-cover bg-center transition duration-500 group-hover:scale-105"
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                      <div className="text-xs uppercase tracking-[0.16em] text-white/70">{item.place}</div>
+                      <h3 className="mt-3 text-2xl font-medium">{item.title}</h3>
+                      <p className="mt-4 text-sm leading-7 text-white/85">{item.desc}</p>
+                      <div className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-white/70 group-hover:text-white transition">
+                        Explore this route
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                      </div>
                     </div>
-                    <h3 className="mt-3 text-2xl font-medium">{item.title}</h3>
-                    <p className="mt-4 text-sm leading-7 text-white/85">{item.desc}</p>
                   </div>
-                </div>
-              </div>
-            ))}
+                </Link>
+              ))}
+            </div>
+            {/* Gradient scroll hint */}
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white to-transparent" />
           </div>
         </div>
       </section>
 
       {/* How it works */}
       <section id="approach" className="mx-auto max-w-7xl px-6 py-20 md:py-24">
-        <div className="max-w-2xl">
-          <div className="text-sm uppercase tracking-[0.18em] text-stone-500">
-            How It Works
-          </div>
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-            Simple and tailored.
-          </h2>
+        <div className="max-w-2xl reveal">
+          <div className="text-sm uppercase tracking-[0.18em] text-stone-500">How It Works</div>
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Simple and tailored.</h2>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          {steps.map((step) => (
+          {steps.map((step, i) => (
             <div
               key={step.num}
-              className="rounded-[28px] border border-stone-200 bg-white p-8 shadow-sm"
+              className="reveal rounded-[28px] border border-stone-200 bg-white p-8 shadow-sm"
+              style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="text-4xl font-semibold tracking-tight text-stone-300">
-                {step.num}
-              </div>
+              <div className="text-4xl font-semibold tracking-tight text-stone-300">{step.num}</div>
               <h3 className="mt-5 text-xl font-medium">{step.title}</h3>
               <p className="mt-4 text-sm leading-7 text-stone-700">{step.desc}</p>
             </div>
@@ -334,36 +352,20 @@ export default function BetweenRoutesWebsite() {
       </section>
 
       {/* About */}
-      <section
-        id="about"
-        className="relative overflow-hidden border-y border-stone-200 bg-stone-900 text-white"
-      >
+      <section id="about" className="relative overflow-hidden border-y border-stone-200 bg-stone-900 text-white">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1600&q=80')",
-          }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1600&q=80')" }}
         />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-[1.1fr_0.9fr] md:py-24">
-          <div>
-            <div className="text-sm uppercase tracking-[0.18em] text-white/60">
-              About Between Routes
-            </div>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-              A more thoughtful way into China.
-            </h2>
+          <div className="reveal">
+            <div className="text-sm uppercase tracking-[0.18em] text-white/60">About Between Routes</div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">A more thoughtful way into China.</h2>
           </div>
-          <div className="space-y-5 text-base leading-8 text-white/80">
-            <p>
-              Between Routes is built for people who want more than a standard itinerary — travelers with a real purpose, whether cultural, professional, or personal.
-            </p>
-            <p>
-              We combine local coordination with a more curated, flexible approach — so each experience feels relevant, useful, and well designed.
-            </p>
-            <p>
-              Whether cultural or business-led, the route starts with your objective. We work with small groups and individuals who value depth over volume.
-            </p>
+          <div className="reveal space-y-5 text-base leading-8 text-white/80">
+            <p>Between Routes is built for people who want more than a standard itinerary — travelers with a real purpose, whether cultural, professional, or personal.</p>
+            <p>We combine local coordination with a more curated, flexible approach — so each experience feels relevant, useful, and well designed.</p>
+            <p>Whether cultural or business-led, the route starts with your objective. We work with small groups and individuals who value depth over volume.</p>
             <div className="mt-6 pt-6 border-t border-white/10 grid grid-cols-3 gap-6 text-center">
               <div>
                 <div className="text-2xl font-semibold">100%</div>
@@ -385,13 +387,9 @@ export default function BetweenRoutesWebsite() {
       {/* Contact */}
       <section id="contact" className="mx-auto max-w-7xl px-6 py-20 md:py-24">
         <div className="grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-start">
-          <div>
-            <div className="text-sm uppercase tracking-[0.18em] text-stone-500">
-              Inquiries
-            </div>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-              Let's plan your route.
-            </h2>
+          <div className="reveal">
+            <div className="text-sm uppercase tracking-[0.18em] text-stone-500">Inquiries</div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">Let's plan your route.</h2>
             <p className="mt-5 max-w-lg text-base leading-8 text-stone-700 md:text-lg">
               Share a few details and we'll come back with the right next step.
             </p>
@@ -411,54 +409,29 @@ export default function BetweenRoutesWebsite() {
             </div>
           </div>
 
-          <form
-            className="rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm"
-            onSubmit={handleSubmit}
-          >
+          <form className="reveal rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm" onSubmit={handleSubmit}>
             <div className="grid gap-5 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm font-medium text-stone-700">Name</label>
-                <input
-                  type="text"
-                  name="name"
-                  className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900"
-                />
+                <input type="text" name="name" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-stone-700">Company</label>
-                <input
-                  type="text"
-                  name="company"
-                  className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900"
-                />
+                <input type="text" name="company" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-stone-700">Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900"
-                />
+                <input type="email" name="email" required className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-stone-700">WhatsApp</label>
-                <input
-                  type="text"
-                  name="whatsapp"
-                  className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900"
-                />
+                <input type="text" name="whatsapp" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
               </div>
             </div>
 
             <div className="mt-5">
-              <label className="mb-2 block text-sm font-medium text-stone-700">
-                What are you looking for?
-              </label>
-              <select
-                name="objective"
-                className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900"
-              >
+              <label className="mb-2 block text-sm font-medium text-stone-700">What are you looking for?</label>
+              <select name="objective" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition">
                 <option>Cultural journey</option>
                 <option>Business & industry visit</option>
                 <option>Tailor-made China travel</option>
@@ -470,38 +443,22 @@ export default function BetweenRoutesWebsite() {
             <div className="mt-5 grid gap-5 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm font-medium text-stone-700">Preferred cities</label>
-                <input
-                  type="text"
-                  name="cities"
-                  className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900"
-                />
+                <input type="text" name="cities" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-stone-700">Dates / timeframe</label>
-                <input
-                  type="text"
-                  name="timing"
-                  className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900"
-                />
+                <input type="text" name="timing" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
               </div>
             </div>
 
             <div className="mt-5">
               <label className="mb-2 block text-sm font-medium text-stone-700">Tell us more</label>
-              <textarea
-                name="details"
-                rows={5}
-                className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900"
-              />
+              <textarea name="details" rows={5} className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
             </div>
 
-            <button
-              type="submit"
-              className="mt-6 rounded-2xl bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5"
-            >
+            <button type="submit" className="mt-6 rounded-2xl bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-stone-800">
               Start Your Journey
             </button>
-
             {status && <p className="mt-4 text-sm text-stone-600">{status}</p>}
           </form>
         </div>
@@ -520,16 +477,16 @@ export default function BetweenRoutesWebsite() {
             <div>
               <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">Services</div>
               <nav className="flex flex-col gap-2 text-sm text-stone-600">
-                <Link to="/china-cultural-journeys" className="hover:text-stone-900">Cultural Journeys</Link>
-                <Link to="/china-business-visits" className="hover:text-stone-900">Business Visits</Link>
-                <Link to="/tailor-made-china-travel" className="hover:text-stone-900">Tailor-made Travel</Link>
-                <Link to="/bespoke-experiences-china" className="hover:text-stone-900">Bespoke Experiences</Link>
+                <Link to="/china-cultural-journeys" className="hover:text-stone-900 transition">Cultural Journeys</Link>
+                <Link to="/china-business-visits" className="hover:text-stone-900 transition">Business Visits</Link>
+                <Link to="/tailor-made-china-travel" className="hover:text-stone-900 transition">Tailor-made Travel</Link>
+                <Link to="/bespoke-experiences-china" className="hover:text-stone-900 transition">Bespoke Experiences</Link>
               </nav>
             </div>
             <div>
               <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">Contact</div>
               <div className="flex flex-col gap-2 text-sm text-stone-600">
-                <a href="#contact" className="hover:text-stone-900">Send an inquiry</a>
+                <a href="#contact" className="hover:text-stone-900 transition">Send an inquiry</a>
                 <span className="text-stone-400 text-xs">WhatsApp preferred</span>
               </div>
             </div>

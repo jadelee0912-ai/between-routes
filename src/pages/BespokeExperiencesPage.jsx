@@ -49,10 +49,29 @@ export default function BespokeExperiencesPage() {
       <Helmet>
         <title>Bespoke China Experiences – Private & Curated Travel | Between Routes</title>
         <meta name="description" content="Private cultural encounters, special-interest journeys, and high-touch travel design in China. For those who want something more distinctive than a standard itinerary." />
+        <meta name="keywords" content="bespoke China travel, private China experience, curated China tour, luxury China travel, exclusive China experiences, VIP China travel, private cultural encounters China, special interest China tour" />
         <link rel="canonical" href="https://www.betweenrouteschina.com/bespoke-experiences-china" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="Bespoke China Experiences – Private & Curated Travel | Between Routes" />
         <meta property="og:description" content="Private cultural encounters, special-interest journeys, and high-touch travel design in China. For those who want something more distinctive." />
         <meta property="og:url" content="https://www.betweenrouteschina.com/bespoke-experiences-china" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1770354227649-059bbfc475db?q=80&w=1200&auto=format&fit=crop" />
+        <meta property="og:site_name" content="Between Routes" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Bespoke China Experiences – Private & Curated Travel" />
+        <meta name="twitter:description" content="Private cultural encounters, special-interest journeys, and high-touch travel design in China." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1770354227649-059bbfc475db?q=80&w=1200&auto=format&fit=crop" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            "name": "Between Routes",
+            "url": "https://www.betweenrouteschina.com/bespoke-experiences-china",
+            "description": "Private cultural encounters, special-interest journeys, and high-touch travel design in China.",
+            "areaServed": "China",
+            "serviceType": ["Bespoke Experiences", "Private Cultural Encounters", "Curated Travel", "Special Interest Tours"]
+          }
+        `}</script>
       </Helmet>
 
       <section className="relative overflow-hidden">

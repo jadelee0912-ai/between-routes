@@ -49,10 +49,29 @@ export default function TailorMadeTravelPage() {
       <Helmet>
         <title>Tailor-Made China Travel – Custom Itineraries & Private Tours | Between Routes</title>
         <meta name="description" content="Every China journey built around your interests, pace, and purpose. No fixed packages — thoughtfully designed private China travel for independent travelers and groups." />
+        <meta name="keywords" content="tailor-made China travel, custom China itinerary, private China tour, personalized China trip, China travel planner, custom tour China, independent travel China, China private guide" />
         <link rel="canonical" href="https://www.betweenrouteschina.com/tailor-made-china-travel" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="Tailor-Made China Travel – Custom Itineraries & Private Tours | Between Routes" />
         <meta property="og:description" content="Every China journey built around your interests, pace, and purpose. No fixed packages — thoughtfully designed private China travel." />
         <meta property="og:url" content="https://www.betweenrouteschina.com/tailor-made-china-travel" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1200&q=80" />
+        <meta property="og:site_name" content="Between Routes" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Tailor-Made China Travel – Custom Itineraries & Private Tours" />
+        <meta name="twitter:description" content="Every China journey built around your interests, pace, and purpose. No fixed packages — thoughtfully designed private China travel." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1200&q=80" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            "name": "Between Routes",
+            "url": "https://www.betweenrouteschina.com/tailor-made-china-travel",
+            "description": "Every China journey built around your interests, pace, and purpose. No fixed packages — thoughtfully designed private China travel.",
+            "areaServed": "China",
+            "serviceType": ["Tailor-Made Travel", "Custom Itineraries", "Private Tours", "Personalized Travel Planning"]
+          }
+        `}</script>
       </Helmet>
 
       <section className="relative overflow-hidden">
@@ -60,7 +79,7 @@ export default function TailorMadeTravelPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1800&q=80')",
+              "url('https://images.unsplash.com/photo-1758685292395-af2ea08b4718?auto=format&fit=crop&w=1800&q=80')",
           }}
         />
         <div className="absolute inset-0 bg-black/45" />

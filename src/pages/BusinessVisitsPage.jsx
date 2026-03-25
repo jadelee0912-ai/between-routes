@@ -49,10 +49,29 @@ export default function BusinessVisitsPage() {
       <Helmet>
         <title>China Business & Industry Visits – Factory Tours, Sourcing Trips | Between Routes</title>
         <meta name="description" content="Curated China business travel for founders, buyers, and teams. Factory visits, sourcing routes, Canton Fair support, and market immersion trips designed around your objective." />
+        <meta name="keywords" content="China factory visit, sourcing trip China, Canton Fair travel, China business travel, factory tour China, China supplier visit, market research China, China trade fair, business delegation China" />
         <link rel="canonical" href="https://www.betweenrouteschina.com/china-business-visits" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="China Business & Industry Visits – Factory Tours, Sourcing Trips | Between Routes" />
         <meta property="og:description" content="Curated China business travel for founders, buyers, and teams. Factory visits, sourcing routes, and market immersion trips designed around your objective." />
         <meta property="og:url" content="https://www.betweenrouteschina.com/china-business-visits" />
+        <meta property="og:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" />
+        <meta property="og:site_name" content="Between Routes" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="China Business & Industry Visits – Factory Tours, Sourcing Trips" />
+        <meta name="twitter:description" content="Curated China business travel for founders, buyers, and teams. Factory visits, sourcing routes, and market immersion trips." />
+        <meta name="twitter:image" content="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80" />
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            "name": "Between Routes",
+            "url": "https://www.betweenrouteschina.com/china-business-visits",
+            "description": "Curated China business travel for founders, buyers, and teams. Factory visits, sourcing routes, Canton Fair support, and market immersion trips.",
+            "areaServed": "China",
+            "serviceType": ["Business Travel", "Factory Visits", "Sourcing Trips", "Canton Fair Support", "Market Immersion"]
+          }
+        `}</script>
       </Helmet>
 
       <section className="relative overflow-hidden">
