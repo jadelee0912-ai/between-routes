@@ -236,7 +236,7 @@ export default function TailorMadeTravelPage() {
               <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">Contact</div>
               <div className="flex flex-col gap-2 text-sm text-stone-600">
                 <Link to="/#contact" className="hover:text-stone-900">Send an inquiry</Link>
-                <span className="text-stone-400 text-xs">WhatsApp preferred</span>
+                <a href="mailto:hello@betweenrouteschina.com" className="text-stone-500 text-xs hover:text-stone-900 transition">hello@betweenrouteschina.com</a>
               </div>
             </div>
           </div>
