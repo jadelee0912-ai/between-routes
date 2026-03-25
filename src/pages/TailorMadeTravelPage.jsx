@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function TailorMadeTravelPage() {
   const [status, setStatus] = useState("");
@@ -45,6 +46,15 @@ export default function TailorMadeTravelPage() {
 
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900">
+      <Helmet>
+        <title>Tailor-Made China Travel – Custom Itineraries & Private Tours | Between Routes</title>
+        <meta name="description" content="Every China journey built around your interests, pace, and purpose. No fixed packages — thoughtfully designed private China travel for independent travelers and groups." />
+        <link rel="canonical" href="https://www.betweenrouteschina.com/tailor-made-china-travel" />
+        <meta property="og:title" content="Tailor-Made China Travel – Custom Itineraries & Private Tours | Between Routes" />
+        <meta property="og:description" content="Every China journey built around your interests, pace, and purpose. No fixed packages — thoughtfully designed private China travel." />
+        <meta property="og:url" content="https://www.betweenrouteschina.com/tailor-made-china-travel" />
+      </Helmet>
+
       <section className="relative overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
@@ -56,22 +66,19 @@ export default function TailorMadeTravelPage() {
         <div className="absolute inset-0 bg-black/45" />
         <div className="relative mx-auto max-w-7xl px-2 py-6 text-white">
           <div className="relative z-20 w-full">
-  <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-
-    <Link to="/" className="flex items-center -ml-8">
-      <img
-        src="/logo-white.png"
-        alt="Between Routes"
-        className="h-30 md:h-32 w-auto object-contain"
-      />
-    </Link>
-
-    <Link to="/" className="text-sm text-white/85 hover:text-white">
-      Back to Home
-    </Link>
-
-  </div>
-</div>
+            <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+              <Link to="/" className="flex items-center -ml-8">
+                <img
+                  src="/logo-white.png"
+                  alt="Between Routes"
+                  className="h-30 md:h-32 w-auto object-contain"
+                />
+              </Link>
+              <Link to="/" className="text-sm text-white/85 hover:text-white">
+                ← Back to Home
+              </Link>
+            </div>
+          </div>
 
           <div className="py-20 md:py-28">
             <div className="max-w-3xl">
@@ -158,7 +165,7 @@ export default function TailorMadeTravelPage() {
               Tell us how you want to travel through China.
             </h2>
             <p className="mt-5 max-w-lg text-base leading-8 text-stone-700 md:text-lg">
-              Share your interests, cities, and timing, and we’ll shape the right next step.
+              Share your interests, cities, and timing, and we'll shape the right next step.
             </p>
           </div>
 
@@ -166,7 +173,7 @@ export default function TailorMadeTravelPage() {
             <div className="grid gap-5 md:grid-cols-2">
               <input type="text" name="name" placeholder="Name" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
               <input type="text" name="company" placeholder="Company" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
-              <input type="email" name="email" placeholder="Email" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+              <input type="email" name="email" required placeholder="Email" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
               <input type="text" name="whatsapp" placeholder="WhatsApp" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
             </div>
 
@@ -187,6 +194,39 @@ export default function TailorMadeTravelPage() {
           </form>
         </div>
       </section>
+
+      <footer className="border-t border-stone-200 bg-white">
+        <div className="mx-auto max-w-7xl px-6 py-10">
+          <div className="grid gap-8 md:grid-cols-[1.5fr_1fr_1fr]">
+            <div>
+              <img src="/logo-dark.png" alt="Between Routes" className="h-10 w-auto object-contain" />
+              <p className="mt-4 text-sm leading-7 text-stone-600 max-w-xs">
+                Tailored China experiences for culture seekers, business travelers, and anyone who wants a more thoughtful way in.
+              </p>
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">Services</div>
+              <nav className="flex flex-col gap-2 text-sm text-stone-600">
+                <Link to="/china-cultural-journeys" className="hover:text-stone-900">Cultural Journeys</Link>
+                <Link to="/china-business-visits" className="hover:text-stone-900">Business Visits</Link>
+                <Link to="/tailor-made-china-travel" className="hover:text-stone-900">Tailor-made Travel</Link>
+                <Link to="/bespoke-experiences-china" className="hover:text-stone-900">Bespoke Experiences</Link>
+              </nav>
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">Contact</div>
+              <div className="flex flex-col gap-2 text-sm text-stone-600">
+                <Link to="/#contact" className="hover:text-stone-900">Send an inquiry</Link>
+                <span className="text-stone-400 text-xs">WhatsApp preferred</span>
+              </div>
+            </div>
+          </div>
+          <div className="mt-8 pt-6 border-t border-stone-100 flex flex-col gap-2 md:flex-row md:justify-between text-xs text-stone-400">
+            <span>© {new Date().getFullYear()} Between Routes. All rights reserved.</span>
+            <Link to="/" className="hover:text-stone-600">betweenrouteschina.com</Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

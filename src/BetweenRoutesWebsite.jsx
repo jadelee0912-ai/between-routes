@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 export default function BetweenRoutesWebsite() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   const services = [
     {
       title: "Cultural Journeys in China",
@@ -125,28 +128,68 @@ export default function BetweenRoutesWebsite() {
 
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900">
+      <Helmet>
+        <title>Between Routes – Tailored China Journeys | Cultural & Business Travel</title>
+        <meta name="description" content="Between Routes designs thoughtful China travel experiences for culture seekers and business travelers. Cultural journeys, business visits, tailor-made travel, and bespoke experiences in China." />
+        <link rel="canonical" href="https://www.betweenrouteschina.com/" />
+        <meta property="og:title" content="Between Routes – Tailored China Journeys | Cultural & Business Travel" />
+        <meta property="og:description" content="Between Routes designs thoughtful China travel for culture seekers and business travelers. Cultural journeys, business visits, and bespoke experiences." />
+        <meta property="og:url" content="https://www.betweenrouteschina.com/" />
+      </Helmet>
+
+      {/* Hero / Header */}
       <section className="relative overflow-hidden">
-          <div className="relative z-20 w-full">
-    <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-      
-      <Link to="/" className="flex items-center">
-        <img
-          src="/logo-white.png"
-          alt="Between Routes"
-          className="h-30 md:h-32 w-auto object-contain"
-        />
-      </Link>
+        <div className="relative z-20 w-full">
+          <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+            <Link to="/" className="flex items-center">
+              <img
+                src="/logo-white.png"
+                alt="Between Routes"
+                className="h-30 md:h-32 w-auto object-contain"
+              />
+            </Link>
 
-      <nav className="hidden md:flex gap-8 text-sm text-white/85">
-        <a href="#services" className="hover:text-white">Services</a>
-        <a href="#journeys" className="hover:text-white">Journeys</a>
-        <a href="#approach" className="hover:text-white">Approach</a>
-        <a href="#about" className="hover:text-white">About</a>
-        <a href="#contact" className="hover:text-white">Contact</a>
-      </nav>
+            {/* Desktop nav */}
+            <nav className="hidden md:flex gap-8 text-sm text-white/85">
+              <a href="#services" className="hover:text-white">Services</a>
+              <a href="#journeys" className="hover:text-white">Journeys</a>
+              <a href="#approach" className="hover:text-white">Approach</a>
+              <a href="#about" className="hover:text-white">About</a>
+              <a href="#contact" className="hover:text-white">Contact</a>
+            </nav>
 
-    </div>
-  </div>
+            {/* Mobile menu button */}
+            <button
+              className="md:hidden flex flex-col gap-1.5 p-2 text-white"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileMenuOpen ? (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg>
+              )}
+            </button>
+          </div>
+
+          {/* Mobile nav dropdown */}
+          {mobileMenuOpen && (
+            <div className="md:hidden absolute top-full left-0 right-0 z-50 bg-stone-900/95 backdrop-blur border-t border-white/10">
+              <div className="flex flex-col px-6 py-4 gap-4 text-sm text-white/90">
+                <a href="#services" onClick={() => setMobileMenuOpen(false)} className="hover:text-white py-1">Services</a>
+                <a href="#journeys" onClick={() => setMobileMenuOpen(false)} className="hover:text-white py-1">Journeys</a>
+                <a href="#approach" onClick={() => setMobileMenuOpen(false)} className="hover:text-white py-1">Approach</a>
+                <a href="#about" onClick={() => setMobileMenuOpen(false)} className="hover:text-white py-1">About</a>
+                <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-white py-1">Contact</a>
+              </div>
+            </div>
+          )}
+        </div>
+
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
@@ -157,7 +200,6 @@ export default function BetweenRoutesWebsite() {
         <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative mx-auto max-w-7xl px-6 py-8 text-white">
-
           <div className="grid gap-12 py-20 md:grid-cols-[1.1fr_0.9fr] md:py-28">
             <div className="max-w-2xl">
               <div className="mb-5 inline-flex rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.16em] text-white/90 backdrop-blur">
@@ -188,6 +230,7 @@ export default function BetweenRoutesWebsite() {
         </div>
       </section>
 
+      {/* Services */}
       <section id="services" className="mx-auto max-w-7xl px-6 py-20 md:py-24">
         <div className="max-w-2xl">
           <div className="text-sm uppercase tracking-[0.18em] text-stone-500">
@@ -221,6 +264,7 @@ export default function BetweenRoutesWebsite() {
         </div>
       </section>
 
+      {/* Journeys */}
       <section id="journeys" className="border-y border-stone-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -262,6 +306,7 @@ export default function BetweenRoutesWebsite() {
         </div>
       </section>
 
+      {/* How it works */}
       <section id="approach" className="mx-auto max-w-7xl px-6 py-20 md:py-24">
         <div className="max-w-2xl">
           <div className="text-sm uppercase tracking-[0.18em] text-stone-500">
@@ -288,6 +333,7 @@ export default function BetweenRoutesWebsite() {
         </div>
       </section>
 
+      {/* About */}
       <section
         id="about"
         className="relative overflow-hidden border-y border-stone-200 bg-stone-900 text-white"
@@ -310,18 +356,33 @@ export default function BetweenRoutesWebsite() {
           </div>
           <div className="space-y-5 text-base leading-8 text-white/80">
             <p>
-              Between Routes is built for people who want more than a standard itinerary.
+              Between Routes is built for people who want more than a standard itinerary — travelers with a real purpose, whether cultural, professional, or personal.
             </p>
             <p>
               We combine local coordination with a more curated, flexible approach — so each experience feels relevant, useful, and well designed.
             </p>
             <p>
-              Whether cultural or business-led, the route starts with your objective.
+              Whether cultural or business-led, the route starts with your objective. We work with small groups and individuals who value depth over volume.
             </p>
+            <div className="mt-6 pt-6 border-t border-white/10 grid grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-2xl font-semibold">100%</div>
+                <div className="mt-1 text-xs uppercase tracking-widest text-white/60">Tailor-made</div>
+              </div>
+              <div>
+                <div className="text-2xl font-semibold">4</div>
+                <div className="mt-1 text-xs uppercase tracking-widest text-white/60">Service types</div>
+              </div>
+              <div>
+                <div className="text-2xl font-semibold">Local</div>
+                <div className="mt-1 text-xs uppercase tracking-widest text-white/60">Coordination</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Contact */}
       <section id="contact" className="mx-auto max-w-7xl px-6 py-20 md:py-24">
         <div className="grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-start">
           <div>
@@ -329,11 +390,25 @@ export default function BetweenRoutesWebsite() {
               Inquiries
             </div>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-              Let’s plan your route.
+              Let's plan your route.
             </h2>
             <p className="mt-5 max-w-lg text-base leading-8 text-stone-700 md:text-lg">
-              Share a few details and we’ll come back with the right next step.
+              Share a few details and we'll come back with the right next step.
             </p>
+            <div className="mt-8 space-y-3 text-sm text-stone-600">
+              <div className="flex items-center gap-3">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-stone-400 shrink-0">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.28 1.18 2 2 0 012.28 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92v2z"/>
+                </svg>
+                <span>WhatsApp preferred for quick replies</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-stone-400 shrink-0">
+                  <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span>We typically respond within 24 hours</span>
+              </div>
+            </div>
           </div>
 
           <form
@@ -362,6 +437,7 @@ export default function BetweenRoutesWebsite() {
                 <input
                   type="email"
                   name="email"
+                  required
                   className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900"
                 />
               </div>
@@ -431,15 +507,37 @@ export default function BetweenRoutesWebsite() {
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="border-t border-stone-200 bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-stone-600 md:flex-row md:items-center md:justify-between">
-          <div>
-            <span className="font-medium text-stone-900">Between Routes</span>
-            <span className="ml-2">
-              Tailored China Experiences for Culture & Business
-            </span>
+        <div className="mx-auto max-w-7xl px-6 py-10">
+          <div className="grid gap-8 md:grid-cols-[1.5fr_1fr_1fr]">
+            <div>
+              <img src="/logo-dark.png" alt="Between Routes" className="h-10 w-auto object-contain" />
+              <p className="mt-4 text-sm leading-7 text-stone-600 max-w-xs">
+                Tailored China experiences for culture seekers, business travelers, and anyone who wants a more thoughtful way in.
+              </p>
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">Services</div>
+              <nav className="flex flex-col gap-2 text-sm text-stone-600">
+                <Link to="/china-cultural-journeys" className="hover:text-stone-900">Cultural Journeys</Link>
+                <Link to="/china-business-visits" className="hover:text-stone-900">Business Visits</Link>
+                <Link to="/tailor-made-china-travel" className="hover:text-stone-900">Tailor-made Travel</Link>
+                <Link to="/bespoke-experiences-china" className="hover:text-stone-900">Bespoke Experiences</Link>
+              </nav>
+            </div>
+            <div>
+              <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">Contact</div>
+              <div className="flex flex-col gap-2 text-sm text-stone-600">
+                <a href="#contact" className="hover:text-stone-900">Send an inquiry</a>
+                <span className="text-stone-400 text-xs">WhatsApp preferred</span>
+              </div>
+            </div>
           </div>
-          <div>Cultural journeys, business visits, tailor-made travel, and bespoke experiences.</div>
+          <div className="mt-8 pt-6 border-t border-stone-100 flex flex-col gap-2 md:flex-row md:justify-between text-xs text-stone-400">
+            <span>© {new Date().getFullYear()} Between Routes. All rights reserved.</span>
+            <span>Tailored China Journeys · Cultural · Business · Bespoke</span>
+          </div>
         </div>
       </footer>
     </div>
