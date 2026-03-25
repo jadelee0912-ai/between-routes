@@ -355,7 +355,7 @@ export default function BetweenRoutesWebsite() {
       <section id="about" className="relative overflow-hidden border-y border-stone-200 bg-stone-900 text-white">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1528164344705-47542687000d?auto=format&fit=crop&w=1600&q=80')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1561031454-4f1331bd2a34?auto=format&fit=crop&w=1600&q=80')" }}
         />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-[1.1fr_0.9fr] md:py-24">
           <div className="reveal">
