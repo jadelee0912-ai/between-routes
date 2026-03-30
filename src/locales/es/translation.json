@@ -1,0 +1,278 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "journeys": "Viajes",
+    "approach": "Proceso",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "backToHome": "← Volver al inicio"
+  },
+  "hero": {
+    "badge": "Viajes Culturales · Visitas de Negocios · Experiencias a Medida",
+    "title": "Viajes a China, disenados en torno a tu proposito.",
+    "subtitle": "Desde inmersion cultural y visitas de negocios hasta viajes a medida y experiencias exclusivas, disenamos formas mas reflexivas de descubrir China.",
+    "cta": "Comienza tu viaje",
+    "explore": "Explorar viajes",
+    "scrollDown": "Explorar"
+  },
+  "services": {
+    "label": "Servicios",
+    "title": "Diferentes formas de llegar a China, segun lo que necesites.",
+    "subtitle": "Elige una direccion y adaptamos el resto.",
+    "explore": "Explorar",
+    "cultural": {
+      "title": "Viajes Culturales en China",
+      "desc": "Explora China a traves de la cultura del te, la medicina tradicional, el patrimonio y experiencias locales mas pausadas, mas alla de las rutas turisticas habituales."
+    },
+    "business": {
+      "title": "Visitas Empresariales e Industriales",
+      "desc": "Conecta con China a traves de visitas a fabricas, viajes de sourcing, inmersion en el mercado y apoyo de viaje enfocado en negocios."
+    },
+    "tailor": {
+      "title": "Viajes a Medida por China",
+      "desc": "Cada viaje se disena en torno a tus intereses, ritmo, prioridades y proposito — sin itinerarios fijos."
+    },
+    "bespoke": {
+      "title": "Experiencias Exclusivas",
+      "desc": "Accede a momentos mas distintivos en China, desde encuentros culturales privados hasta experiencias cuidadosamente seleccionadas no disponibles para la mayoria de viajeros."
+    }
+  },
+  "journeys": {
+    "label": "Puntos de partida",
+    "title": "Algunas formas de empezar.",
+    "subtitle": "Estos son ejemplos, no paquetes fijos. Cada ruta se puede adaptar.",
+    "exploreRoute": "Explorar esta ruta",
+    "tea": {
+      "title": "Retiros de Te y Montana",
+      "place": "Hangzhou · Wuyi · Yunnan",
+      "desc": "Un viaje mas pausado a traves del te, el paisaje y la artesania local."
+    },
+    "wellness": {
+      "title": "Bienestar y Sabiduria China",
+      "place": "Shanghai · Hangzhou · Chengdu",
+      "desc": "Una forma mas suave de adentrarse en el bienestar chino, el movimiento y los rituales diarios."
+    },
+    "modern": {
+      "title": "China Moderna para Mentes Curiosas",
+      "place": "Shanghai · Shenzhen · Suzhou",
+      "desc": "Diseno, innovacion, manufactura y cultura urbana en una sola ruta."
+    },
+    "businessRoutes": {
+      "title": "Rutas de Negocios con Proposito",
+      "place": "Feria de Canton · Yiwu · Clusters Industriales",
+      "desc": "Viajes enfocados para compradores, fundadores y equipos con objetivos empresariales claros."
+    }
+  },
+  "approach": {
+    "label": "Como funciona",
+    "title": "Simple y personalizado.",
+    "step1": {
+      "num": "01",
+      "title": "Cuentanos tu objetivo",
+      "desc": "Cultura, negocios, aprendizaje, sourcing o un interes mas personal."
+    },
+    "step2": {
+      "num": "02",
+      "title": "Disenamos la ruta",
+      "desc": "Ciudades, ritmo, reuniones, alojamientos y experiencias construidos en torno a tu objetivo."
+    },
+    "step3": {
+      "num": "03",
+      "title": "Te ayudamos a hacerlo realidad",
+      "desc": "Con coordinacion practica antes y durante el viaje."
+    }
+  },
+  "about": {
+    "label": "Sobre Between Routes",
+    "title": "Una forma mas reflexiva de descubrir China.",
+    "p1": "Between Routes esta disenado para personas que quieren mas que un itinerario estandar — viajeros con un proposito real, ya sea cultural, profesional o personal.",
+    "p2": "Combinamos coordinacion local con un enfoque mas curado y flexible — para que cada experiencia se sienta relevante, util y bien disenada.",
+    "p3": "Ya sea cultural o de negocios, la ruta comienza con tu objetivo. Trabajamos con grupos pequenos e individuos que valoran la profundidad sobre el volumen.",
+    "stat1": "A medida",
+    "stat2": "Tipos de servicio",
+    "stat3": "Coordinacion"
+  },
+  "contact": {
+    "label": "Consultas",
+    "title": "Planifiquemos tu ruta.",
+    "subtitle": "Comparte algunos detalles y te responderemos con el siguiente paso adecuado.",
+    "responseTime": "Normalmente respondemos en 24 horas",
+    "name": "Nombre",
+    "company": "Empresa",
+    "email": "Correo electronico",
+    "whatsapp": "WhatsApp",
+    "objective": "Que estas buscando?",
+    "cities": "Ciudades preferidas",
+    "timing": "Fechas / periodo",
+    "details": "Cuentanos mas",
+    "submit": "Comienza tu viaje",
+    "sending": "Enviando...",
+    "success": "Gracias — tu consulta ha sido enviada.",
+    "error": "Algo salio mal. Por favor, intentalo de nuevo.",
+    "options": {
+      "cultural": "Viaje cultural",
+      "business": "Visita empresarial e industrial",
+      "tailor": "Viaje a medida por China",
+      "bespoke": "Experiencia exclusiva",
+      "unsure": "Aun no lo se"
+    }
+  },
+  "footer": {
+    "desc": "Experiencias a medida en China para amantes de la cultura, viajeros de negocios y cualquiera que quiera una forma mas reflexiva de descubrirla.",
+    "services": "Servicios",
+    "culturalJourneys": "Viajes Culturales",
+    "businessVisits": "Visitas de Negocios",
+    "tailorTravel": "Viajes a Medida",
+    "bespokeExp": "Experiencias Exclusivas",
+    "contact": "Contacto",
+    "sendInquiry": "Enviar una consulta",
+    "copyright": "© {{year}} Between Routes. Todos los derechos reservados.",
+    "tagline": "Viajes a Medida por China · Cultural · Negocios · Exclusivo"
+  },
+  "culturalPage": {
+    "badge": "Viajes Culturales en China",
+    "title": "Explora China a traves de la cultura, no de listas.",
+    "subtitle": "Desde montanas de te y medicina tradicional hasta artesania local y rituales mas pausados, estos viajes estan disenados para viajeros que quieren una forma mas profunda y reflexiva de descubrir China.",
+    "sectionLabel": "Que incluye",
+    "sectionTitle": "Viajes culturales con mas profundidad.",
+    "p1": "Nuestros viajes culturales van mas alla del turismo convencional. Estan construidos en torno al contexto, el ritmo y encuentros locales significativos.",
+    "p2": "Segun tus intereses, una ruta puede incluir cultura del te, medicina tradicional china, tradiciones gastronomicas, pueblos patrimoniales, artesania, arquitectura o escenas culturales modernas en ciudades como Shanghai y Shenzhen.",
+    "p3": "Cada viaje se moldea en torno a lo que quieres entender, no solo lo que quieres ver.",
+    "feature1": "Viajes de cultura del te en Hangzhou, Wuyi o Yunnan",
+    "feature2": "Medicina tradicional china y viajes orientados al bienestar",
+    "feature3": "Artesania, patrimonio, gastronomia y experiencias locales mas pausadas",
+    "ideasLabel": "Ideas de viaje",
+    "ideasTitle": "Algunos puntos de partida culturales.",
+    "idea1": {
+      "title": "Te y Paisajes de Montana",
+      "desc": "Viaje pausado por regiones productoras de te, degustaciones, estancias locales y rituales culturales ligados al paisaje y la artesania."
+    },
+    "idea2": {
+      "title": "Bienestar y Sabiduria China",
+      "desc": "Una ruta moldeada en torno al movimiento, el equilibrio, los rituales diarios, las practicas de bienestar chinas y un ritmo restaurador."
+    },
+    "idea3": {
+      "title": "Patrimonio y Vida Local",
+      "desc": "Pueblos historicos, arquitectura, artesania y tradiciones gastronomicas abordadas con mas intimidad y menos prisa."
+    },
+    "formLabel": "Comienza tu viaje",
+    "formTitle": "Cuentanos que tipo de viaje cultural buscas.",
+    "formSubtitle": "Comparte tus intereses, ciudades y fechas, y te responderemos con el siguiente paso adecuado.",
+    "detailsPlaceholder": "Cuentanos mas sobre tus intereses",
+    "seo": {
+      "title": "Viajes Culturales en China – Te, Patrimonio y Experiencias Locales | Between Routes",
+      "description": "Explora China a traves de la cultura del te, la medicina tradicional, la artesania y el patrimonio. Viajes culturales a medida disenados con profundidad."
+    }
+  },
+  "businessPage": {
+    "badge": "Visitas Empresariales e Industriales",
+    "title": "Viajes a China disenados en torno a objetivos de negocio.",
+    "subtitle": "Para fundadores, compradores, equipos, inversores y socios que buscan entender proveedores, industrias, ferias comerciales o el mercado sobre el terreno.",
+    "sectionLabel": "Lo que organizamos",
+    "sectionTitle": "Apoyo practico para viajes de negocios en China.",
+    "p1": "Ayudamos a dar forma a visitas de negocios mas claras, enfocadas y faciles de ejecutar.",
+    "p2": "Esto puede incluir visitas a fabricas, reuniones con proveedores, rutas de sourcing, inmersion en el mercado, planificacion de ciudades, apoyo de traduccion o combinar ferias comerciales con visitas mas especificas.",
+    "p3": "El objetivo no es solo cumplir con una agenda, sino hacer que el viaje sea mas util y este mejor disenado.",
+    "feature1": "Visitas a fabricas y proveedores",
+    "feature2": "Apoyo en ferias comerciales y sourcing",
+    "feature3": "Rutas de viaje de negocios moldeadas en torno a tu objetivo",
+    "casesLabel": "Casos de uso tipicos",
+    "casesTitle": "Algunos formatos de visita de negocios.",
+    "case1": {
+      "title": "Viajes de Sourcing y Proveedores",
+      "desc": "Disenados para marcas, compradores y fundadores que necesitan rutas eficientes entre fabricas, clusters y reuniones."
+    },
+    "case2": {
+      "title": "Extensiones de Ferias Comerciales",
+      "desc": "Ve mas alla de la feria con visitas a sitios, reuniones de seguimiento y coordinacion entre ciudades."
+    },
+    "case3": {
+      "title": "Visitas de Inmersion en el Mercado",
+      "desc": "Para equipos que quieren entender el retail, las operaciones, la manufactura o los ecosistemas de diseno en China."
+    },
+    "formLabel": "Comienza tu viaje",
+    "formTitle": "Cuentanos que tipo de visita de negocios necesitas.",
+    "formSubtitle": "Comparte tu objetivo, ciudades y fechas, y te responderemos con el siguiente paso adecuado.",
+    "detailsPlaceholder": "Cuentanos mas sobre tu objetivo",
+    "seo": {
+      "title": "Visitas Empresariales e Industriales en China – Tours de Fabricas, Viajes de Sourcing | Between Routes",
+      "description": "Viajes de negocios a China para fundadores, compradores y equipos. Visitas a fabricas, rutas de sourcing, apoyo en la Feria de Canton y viajes de inmersion en el mercado."
+    }
+  },
+  "tailorPage": {
+    "badge": "Viajes a Medida por China",
+    "title": "Viajes por China disenados segun tu forma de moverte.",
+    "subtitle": "Ni un tour fijo, ni un itinerario generico — sino una ruta disenada en torno a tus intereses, ritmo, prioridades y proposito.",
+    "sectionLabel": "Como funciona",
+    "sectionTitle": "Mas personal que un paquete.",
+    "p1": "El viaje a medida empieza por el viajero. Comenzamos con tus intereses, fechas, ciudades, nivel de comodidad y el tipo de experiencia que quieres tener.",
+    "p2": "Algunas rutas se inclinan hacia la cultura, otras hacia la gastronomia, otras hacia la naturaleza o las ciudades modernas. Algunas avanzan despacio; otras estan estructuradas en torno a reuniones o multiples destinos.",
+    "p3": "La idea no es encajarte en una plantilla, sino disenar una ruta que realmente tenga sentido para ti.",
+    "feature1": "Ritmo flexible y combinaciones de ciudades",
+    "feature2": "Viaje moldeado en torno a tus intereses y objetivos",
+    "feature3": "Una ruta mas considerada, no un paquete unico para todos",
+    "stylesLabel": "Estilos de viaje",
+    "stylesTitle": "Diferentes ritmos, diferentes rutas.",
+    "style1": {
+      "title": "Viaje Cultural",
+      "desc": "Construido en torno al te, el patrimonio, el diseno, la gastronomia, las tradiciones locales y una inmersion mas pausada."
+    },
+    "style2": {
+      "title": "Rutas por Ciudades y China Moderna",
+      "desc": "Para viajeros interesados en diseno, innovacion, arquitectura y cultura urbana."
+    },
+    "style3": {
+      "title": "Viajes de Proposito Mixto",
+      "desc": "Rutas que combinan viaje, aprendizaje, reuniones, sourcing u otros objetivos especificos."
+    },
+    "formLabel": "Comienza tu viaje",
+    "formTitle": "Cuentanos como quieres viajar por China.",
+    "formSubtitle": "Comparte tus intereses, ciudades y fechas, y disenaremos el siguiente paso adecuado.",
+    "detailsPlaceholder": "Cuentanos mas sobre tu ruta ideal",
+    "seo": {
+      "title": "Viajes a Medida por China – Itinerarios Personalizados y Tours Privados | Between Routes",
+      "description": "Cada viaje a China disenado en torno a tus intereses, ritmo y proposito. Sin paquetes fijos — viajes privados a China disenados con esmero."
+    }
+  },
+  "bespokePage": {
+    "badge": "Experiencias Exclusivas",
+    "title": "Formas mas distintivas de descubrir China.",
+    "subtitle": "Para viajeros o equipos que buscan algo mas privado, mas considerado y menos estandar de lo que la mayoria de itinerarios puede ofrecer.",
+    "sectionLabel": "Que significa exclusivo",
+    "sectionTitle": "Curado en torno a la rareza, el acceso y la intencion.",
+    "p1": "Las experiencias exclusivas son para solicitudes que van mas alla de una ruta de viaje o negocios estandar.",
+    "p2": "Eso puede significar encuentros culturales mas privados, momentos mas cuidadosamente disenados, o viajes moldeados en torno a un objetivo, tema o audiencia muy especificos.",
+    "p3": "El enfoque esta en la relevancia, la calidad y el esmero — no en la escala.",
+    "feature1": "Encuentros culturales privados",
+    "feature2": "Momentos curados disenados en torno a un brief especifico",
+    "feature3": "Conceptos de viaje y proyecto que necesitan mas flexibilidad y discrecion",
+    "directionsLabel": "Posibles direcciones",
+    "directionsTitle": "Algunas posibilidades exclusivas.",
+    "direction1": {
+      "title": "Acceso Cultural Privado",
+      "desc": "Experiencias disenadas en torno a formas mas pequenas, tranquilas y exclusivas de compromiso cultural."
+    },
+    "direction2": {
+      "title": "Viajes de Interes Especial",
+      "desc": "Rutas construidas en torno a un tema, una pasion, un nicho o un tipo especifico de audiencia."
+    },
+    "direction3": {
+      "title": "Diseno de Viaje Premium",
+      "desc": "Para viajes donde la secuencia, la discrecion, la calidad y el diseno de experiencia importan mas que el volumen."
+    },
+    "formLabel": "Comienza tu viaje",
+    "formTitle": "Cuentanos que tipo de experiencia exclusiva tienes en mente.",
+    "formSubtitle": "Comparte tu idea, ciudades y fechas, y te responderemos con el siguiente paso adecuado.",
+    "detailsPlaceholder": "Cuentanos mas sobre tu idea",
+    "seo": {
+      "title": "Experiencias Exclusivas en China – Viajes Privados y Curados | Between Routes",
+      "description": "Encuentros culturales privados, viajes de interes especial y diseno de viaje premium en China. Para quienes quieren algo mas distintivo que un itinerario estandar."
+    }
+  },
+  "seo": {
+    "homeTitle": "Between Routes – Viajes a Medida por China | Viajes Culturales y de Negocios",
+    "homeDescription": "Between Routes disena experiencias de viaje reflexivas por China para amantes de la cultura y viajeros de negocios. Viajes culturales, visitas de negocios, viajes a medida y experiencias exclusivas en China.",
+    "ogTitle": "Between Routes – Viajes a Medida por China | Viajes Culturales y de Negocios",
+    "ogDescription": "Between Routes disena viajes reflexivos por China para amantes de la cultura y viajeros de negocios. Viajes culturales, visitas de negocios y experiencias exclusivas."
+  }
+}

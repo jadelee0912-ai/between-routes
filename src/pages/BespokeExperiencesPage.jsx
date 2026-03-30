@@ -1,13 +1,19 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
+import { useLocalizedPath } from "../hooks/useLocalizedPath";
+import { supportedLanguages } from "../i18n";
+import LanguageSwitcher from "../components/LanguageSwitcher";
 
 export default function BespokeExperiencesPage() {
+  const { t, i18n } = useTranslation();
+  const lp = useLocalizedPath();
   const [status, setStatus] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Sending...");
+    setStatus(t("contact.sending"));
 
     const form = e.target;
     const formData = new FormData(form);
@@ -21,6 +27,7 @@ export default function BespokeExperiencesPage() {
       cities: formData.get("cities"),
       timing: formData.get("timing"),
       details: formData.get("details"),
+      language: i18n.language,
     };
 
     try {
@@ -34,39 +41,53 @@ export default function BespokeExperiencesPage() {
       });
 
       if (response.ok) {
-        setStatus("Thanks — your inquiry has been sent.");
+        setStatus(t("contact.success"));
         form.reset();
       } else {
-        setStatus("Something went wrong. Please try again.");
+        setStatus(t("contact.error"));
       }
     } catch {
-      setStatus("Something went wrong. Please try again.");
+      setStatus(t("contact.error"));
     }
   };
+
+  const baseUrl = "https://www.betweenrouteschina.com";
+  const pagePath = "/bespoke-experiences-china";
+  const currentPath = i18n.language === "en" ? pagePath : `/${i18n.language}${pagePath}`;
+  const canonicalUrl = `${baseUrl}${currentPath}`;
 
   return (
     <div className="min-h-screen bg-stone-50 text-stone-900">
       <Helmet>
-        <title>Bespoke China Experiences – Private & Curated Travel | Between Routes</title>
-        <meta name="description" content="Private cultural encounters, special-interest journeys, and high-touch travel design in China. For those who want something more distinctive than a standard itinerary." />
-        <meta name="keywords" content="bespoke China travel, private China experience, curated China tour, luxury China travel, exclusive China experiences, VIP China travel, private cultural encounters China, special interest China tour" />
-        <link rel="canonical" href="https://www.betweenrouteschina.com/bespoke-experiences-china" />
+        <html lang={i18n.language} />
+        <title>{t("bespokePage.seo.title")}</title>
+        <meta name="description" content={t("bespokePage.seo.description")} />
+        <link rel="canonical" href={canonicalUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Bespoke China Experiences – Private & Curated Travel | Between Routes" />
-        <meta property="og:description" content="Private cultural encounters, special-interest journeys, and high-touch travel design in China. For those who want something more distinctive." />
-        <meta property="og:url" content="https://www.betweenrouteschina.com/bespoke-experiences-china" />
+        <meta property="og:title" content={t("bespokePage.seo.title")} />
+        <meta property="og:description" content={t("bespokePage.seo.description")} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:image" content="https://images.unsplash.com/photo-1770354227649-059bbfc475db?q=80&w=1200&auto=format&fit=crop" />
         <meta property="og:site_name" content="Between Routes" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bespoke China Experiences – Private & Curated Travel" />
-        <meta name="twitter:description" content="Private cultural encounters, special-interest journeys, and high-touch travel design in China." />
+        <meta name="twitter:title" content={t("bespokePage.seo.title")} />
+        <meta name="twitter:description" content={t("bespokePage.seo.description")} />
         <meta name="twitter:image" content="https://images.unsplash.com/photo-1770354227649-059bbfc475db?q=80&w=1200&auto=format&fit=crop" />
+        {supportedLanguages.map((lang) => (
+          <link
+            key={lang.code}
+            rel="alternate"
+            hrefLang={lang.code}
+            href={`${baseUrl}${lang.code === "en" ? pagePath : `/${lang.code}${pagePath}`}`}
+          />
+        ))}
+        <link rel="alternate" hrefLang="x-default" href={`${baseUrl}${pagePath}`} />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "TravelAgency",
             "name": "Between Routes",
-            "url": "https://www.betweenrouteschina.com/bespoke-experiences-china",
+            "url": "${canonicalUrl}",
             "description": "Private cultural encounters, special-interest journeys, and high-touch travel design in China.",
             "areaServed": "China",
             "serviceType": ["Bespoke Experiences", "Private Cultural Encounters", "Curated Travel", "Special Interest Tours"]
@@ -86,29 +107,32 @@ export default function BespokeExperiencesPage() {
         <div className="relative mx-auto max-w-7xl px-2 py-6 text-white">
           <div className="relative z-20 w-full">
             <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
-              <Link to="/" className="flex items-center -ml-8">
+              <Link to={lp("/")} className="flex items-center -ml-8">
                 <img
                   src="/logo-white.png"
                   alt="Between Routes"
                   className="h-30 md:h-32 w-auto object-contain"
                 />
               </Link>
-              <Link to="/" className="text-sm text-white/85 hover:text-white">
-                ← Back to Home
-              </Link>
+              <div className="flex items-center gap-4">
+                <Link to={lp("/")} className="text-sm text-white/85 hover:text-white">
+                  {t("nav.backToHome")}
+                </Link>
+                <LanguageSwitcher variant="dark" />
+              </div>
             </div>
           </div>
 
           <div className="py-20 md:py-28">
             <div className="max-w-3xl">
               <div className="mb-5 inline-flex rounded-full border border-white/30 bg-white/10 px-4 py-1.5 text-xs uppercase tracking-[0.16em] text-white/90 backdrop-blur">
-                Bespoke Experiences
+                {t("bespokePage.badge")}
               </div>
               <h1 className="text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-                More distinctive ways into China.
+                {t("bespokePage.title")}
               </h1>
               <p className="mt-5 max-w-2xl text-base leading-7 text-white/85 md:text-lg">
-                For travelers or teams looking for something more private, more considered, and less standard than what most itineraries can offer.
+                {t("bespokePage.subtitle")}
               </p>
             </div>
           </div>
@@ -118,23 +142,23 @@ export default function BespokeExperiencesPage() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-10 md:grid-cols-2">
           <div>
-            <div className="text-sm uppercase tracking-[0.18em] text-stone-500">What bespoke means</div>
+            <div className="text-sm uppercase tracking-[0.18em] text-stone-500">{t("bespokePage.sectionLabel")}</div>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-              Curated around rarity, access, and intention.
+              {t("bespokePage.sectionTitle")}
             </h2>
           </div>
           <div className="space-y-5 text-base leading-8 text-stone-700">
-            <p>Bespoke experiences are for requests that go beyond a standard travel or business route.</p>
-            <p>That might mean more private cultural encounters, more carefully staged moments, or journeys shaped around a very specific objective, theme, or audience.</p>
-            <p>The focus is on relevance, quality, and thoughtfulness — not scale.</p>
+            <p>{t("bespokePage.p1")}</p>
+            <p>{t("bespokePage.p2")}</p>
+            <p>{t("bespokePage.p3")}</p>
           </div>
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {[
-            "Private cultural encounters",
-            "Curated moments designed around a specific brief",
-            "Travel and project concepts that need more flexibility and discretion",
+            t("bespokePage.feature1"),
+            t("bespokePage.feature2"),
+            t("bespokePage.feature3"),
           ].map((item) => (
             <div key={item} className="rounded-[28px] border border-stone-200 bg-white p-8 shadow-sm">
               <p className="text-base leading-8 text-stone-700">{item}</p>
@@ -146,25 +170,25 @@ export default function BespokeExperiencesPage() {
       <section className="border-y border-stone-200 bg-white">
         <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="max-w-2xl">
-            <div className="text-sm uppercase tracking-[0.18em] text-stone-500">Possible directions</div>
+            <div className="text-sm uppercase tracking-[0.18em] text-stone-500">{t("bespokePage.directionsLabel")}</div>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-              A few bespoke possibilities.
+              {t("bespokePage.directionsTitle")}
             </h2>
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
               {
-                title: "Private Cultural Access",
-                desc: "Experiences designed around smaller, quieter, more exclusive forms of cultural engagement.",
+                title: t("bespokePage.direction1.title"),
+                desc: t("bespokePage.direction1.desc"),
               },
               {
-                title: "Special-interest Journeys",
-                desc: "Routes built around a theme, a passion, a niche subject, or a specific kind of audience.",
+                title: t("bespokePage.direction2.title"),
+                desc: t("bespokePage.direction2.desc"),
               },
               {
-                title: "High-touch Travel Design",
-                desc: "For journeys where sequencing, discretion, quality, and experience design matter more than volume.",
+                title: t("bespokePage.direction3.title"),
+                desc: t("bespokePage.direction3.desc"),
               },
             ].map((item) => (
               <div key={item.title} className="rounded-[28px] border border-stone-200 bg-stone-50 p-8">
@@ -179,34 +203,34 @@ export default function BespokeExperiencesPage() {
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-start">
           <div>
-            <div className="text-sm uppercase tracking-[0.18em] text-stone-500">Start Your Journey</div>
+            <div className="text-sm uppercase tracking-[0.18em] text-stone-500">{t("bespokePage.formLabel")}</div>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-              Tell us what kind of bespoke experience you have in mind.
+              {t("bespokePage.formTitle")}
             </h2>
             <p className="mt-5 max-w-lg text-base leading-8 text-stone-700 md:text-lg">
-              Share your idea, cities, and timing, and we'll come back with the right next step.
+              {t("bespokePage.formSubtitle")}
             </p>
           </div>
 
           <form className="rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm" onSubmit={handleSubmit}>
             <div className="grid gap-5 md:grid-cols-2">
-              <input type="text" name="name" placeholder="Name" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
-              <input type="text" name="company" placeholder="Company" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
-              <input type="email" name="email" required placeholder="Email" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
-              <input type="text" name="whatsapp" placeholder="WhatsApp" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+              <input type="text" name="name" placeholder={t("contact.name")} className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+              <input type="text" name="company" placeholder={t("contact.company")} className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+              <input type="email" name="email" required placeholder={t("contact.email")} className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+              <input type="text" name="whatsapp" placeholder={t("contact.whatsapp")} className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
             </div>
 
             <div className="mt-5 grid gap-5 md:grid-cols-2">
-              <input type="text" name="cities" placeholder="Preferred cities" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
-              <input type="text" name="timing" placeholder="Dates / timeframe" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+              <input type="text" name="cities" placeholder={t("contact.cities")} className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+              <input type="text" name="timing" placeholder={t("contact.timing")} className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
             </div>
 
             <div className="mt-5">
-              <textarea name="details" rows={5} placeholder="Tell us more about your idea" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
+              <textarea name="details" rows={5} placeholder={t("bespokePage.detailsPlaceholder")} className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900" />
             </div>
 
             <button type="submit" className="mt-6 rounded-2xl bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5">
-              Start Your Journey
+              {t("contact.submit")}
             </button>
 
             {status && <p className="mt-4 text-sm text-stone-600">{status}</p>}
@@ -220,29 +244,29 @@ export default function BespokeExperiencesPage() {
             <div>
               <img src="/logo-dark.png" alt="Between Routes" className="h-10 w-auto object-contain" />
               <p className="mt-4 text-sm leading-7 text-stone-600 max-w-xs">
-                Tailored China experiences for culture seekers, business travelers, and anyone who wants a more thoughtful way in.
+                {t("footer.desc")}
               </p>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">Services</div>
+              <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">{t("footer.services")}</div>
               <nav className="flex flex-col gap-2 text-sm text-stone-600">
-                <Link to="/china-cultural-journeys" className="hover:text-stone-900">Cultural Journeys</Link>
-                <Link to="/china-business-visits" className="hover:text-stone-900">Business Visits</Link>
-                <Link to="/tailor-made-china-travel" className="hover:text-stone-900">Tailor-made Travel</Link>
-                <Link to="/bespoke-experiences-china" className="hover:text-stone-900">Bespoke Experiences</Link>
+                <Link to={lp("/china-cultural-journeys")} className="hover:text-stone-900">{t("footer.culturalJourneys")}</Link>
+                <Link to={lp("/china-business-visits")} className="hover:text-stone-900">{t("footer.businessVisits")}</Link>
+                <Link to={lp("/tailor-made-china-travel")} className="hover:text-stone-900">{t("footer.tailorTravel")}</Link>
+                <Link to={lp("/bespoke-experiences-china")} className="hover:text-stone-900">{t("footer.bespokeExp")}</Link>
               </nav>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">Contact</div>
+              <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">{t("footer.contact")}</div>
               <div className="flex flex-col gap-2 text-sm text-stone-600">
-                <Link to="/#contact" className="hover:text-stone-900">Send an inquiry</Link>
+                <Link to={lp("/#contact")} className="hover:text-stone-900">{t("footer.sendInquiry")}</Link>
                 <a href="mailto:hello@betweenrouteschina.com" className="text-stone-500 text-xs hover:text-stone-900 transition">hello@betweenrouteschina.com</a>
               </div>
             </div>
           </div>
           <div className="mt-8 pt-6 border-t border-stone-100 flex flex-col gap-2 md:flex-row md:justify-between text-xs text-stone-400">
-            <span>© {new Date().getFullYear()} Between Routes. All rights reserved.</span>
-            <Link to="/" className="hover:text-stone-600">betweenrouteschina.com</Link>
+            <span>{t("footer.copyright", { year: new Date().getFullYear() })}</span>
+            <Link to={lp("/")} className="hover:text-stone-600">betweenrouteschina.com</Link>
           </div>
         </div>
       </footer>

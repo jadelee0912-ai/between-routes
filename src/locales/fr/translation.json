@@ -1,0 +1,278 @@
+{
+  "nav": {
+    "services": "Services",
+    "journeys": "Voyages",
+    "approach": "Approche",
+    "about": "A propos",
+    "contact": "Contact",
+    "backToHome": "← Retour a l'accueil"
+  },
+  "hero": {
+    "badge": "Voyages Culturels · Visites d'Affaires · Experiences Sur Mesure",
+    "title": "Des voyages en Chine, concus autour de votre objectif.",
+    "subtitle": "De l'immersion culturelle aux visites d'affaires, en passant par les voyages sur mesure et les experiences exclusives, nous concevons des facons plus reflechies de decouvrir la Chine.",
+    "cta": "Commencez votre voyage",
+    "explore": "Explorer les voyages",
+    "scrollDown": "Explorer"
+  },
+  "services": {
+    "label": "Services",
+    "title": "Differentes facons de decouvrir la Chine, selon vos besoins.",
+    "subtitle": "Choisissez une direction et nous adaptons le reste.",
+    "explore": "Explorer",
+    "cultural": {
+      "title": "Voyages Culturels en Chine",
+      "desc": "Explorez la Chine a travers la culture du the, la medecine traditionnelle, le patrimoine et des experiences locales plus lentes, au-dela des circuits touristiques habituels."
+    },
+    "business": {
+      "title": "Visites d'Affaires et Industrielles",
+      "desc": "Engagez-vous avec la Chine a travers des visites d'usines, des voyages de sourcing, une immersion dans le marche et un accompagnement de voyage oriente affaires."
+    },
+    "tailor": {
+      "title": "Voyages Sur Mesure en Chine",
+      "desc": "Chaque voyage est concu autour de vos interets, votre rythme, vos priorites et votre objectif — sans itineraires fixes."
+    },
+    "bespoke": {
+      "title": "Experiences Exclusives",
+      "desc": "Accedez a des moments plus distinctifs en Chine, des rencontres culturelles privees aux experiences soigneusement selectionnees inaccessibles a la plupart des voyageurs."
+    }
+  },
+  "journeys": {
+    "label": "Points de depart",
+    "title": "Quelques facons de commencer.",
+    "subtitle": "Ce sont des exemples, pas des forfaits fixes. Chaque itineraire peut etre adapte.",
+    "exploreRoute": "Explorer cet itineraire",
+    "tea": {
+      "title": "Retraites The et Montagne",
+      "place": "Hangzhou · Wuyi · Yunnan",
+      "desc": "Un voyage plus lent a travers le the, les paysages et l'artisanat local."
+    },
+    "wellness": {
+      "title": "Bien-etre et Sagesse Chinoise",
+      "place": "Shanghai · Hangzhou · Chengdu",
+      "desc": "Une approche plus douce du bien-etre chinois, du mouvement et des rituels quotidiens."
+    },
+    "modern": {
+      "title": "La Chine Moderne pour les Esprits Curieux",
+      "place": "Shanghai · Shenzhen · Suzhou",
+      "desc": "Design, innovation, industrie et culture urbaine en un seul itineraire."
+    },
+    "businessRoutes": {
+      "title": "Routes d'Affaires avec un Objectif",
+      "place": "Foire de Canton · Yiwu · Clusters Industriels",
+      "desc": "Voyages cibles pour acheteurs, fondateurs et equipes avec des objectifs commerciaux clairs."
+    }
+  },
+  "approach": {
+    "label": "Comment ca marche",
+    "title": "Simple et personnalise.",
+    "step1": {
+      "num": "01",
+      "title": "Dites-nous votre objectif",
+      "desc": "Culture, affaires, apprentissage, sourcing ou un interet plus personnel."
+    },
+    "step2": {
+      "num": "02",
+      "title": "Nous concevons l'itineraire",
+      "desc": "Villes, rythme, reunions, hebergements et experiences construits autour de votre objectif."
+    },
+    "step3": {
+      "num": "03",
+      "title": "Nous vous aidons a le realiser",
+      "desc": "Avec une coordination pratique avant et pendant le voyage."
+    }
+  },
+  "about": {
+    "label": "A propos de Between Routes",
+    "title": "Une facon plus reflechie de decouvrir la Chine.",
+    "p1": "Between Routes est concu pour ceux qui veulent plus qu'un itineraire standard — des voyageurs avec un veritable objectif, qu'il soit culturel, professionnel ou personnel.",
+    "p2": "Nous combinons coordination locale et approche plus curee et flexible — pour que chaque experience soit pertinente, utile et bien concue.",
+    "p3": "Qu'il soit culturel ou oriente affaires, l'itineraire commence par votre objectif. Nous travaillons avec de petits groupes et des individuels qui valorisent la profondeur plutot que le volume.",
+    "stat1": "Sur mesure",
+    "stat2": "Types de service",
+    "stat3": "Coordination"
+  },
+  "contact": {
+    "label": "Demandes",
+    "title": "Planifions votre itineraire.",
+    "subtitle": "Partagez quelques details et nous vous repondrons avec la prochaine etape appropriee.",
+    "responseTime": "Nous repondons generalement sous 24 heures",
+    "name": "Nom",
+    "company": "Entreprise",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "objective": "Que recherchez-vous ?",
+    "cities": "Villes preferees",
+    "timing": "Dates / periode",
+    "details": "Dites-nous en plus",
+    "submit": "Commencez votre voyage",
+    "sending": "Envoi en cours...",
+    "success": "Merci — votre demande a ete envoyee.",
+    "error": "Une erreur s'est produite. Veuillez reessayer.",
+    "options": {
+      "cultural": "Voyage culturel",
+      "business": "Visite d'affaires et industrielle",
+      "tailor": "Voyage sur mesure en Chine",
+      "bespoke": "Experience exclusive",
+      "unsure": "Pas encore sur"
+    }
+  },
+  "footer": {
+    "desc": "Experiences sur mesure en Chine pour amateurs de culture, voyageurs d'affaires et tous ceux qui souhaitent une approche plus reflechie.",
+    "services": "Services",
+    "culturalJourneys": "Voyages Culturels",
+    "businessVisits": "Visites d'Affaires",
+    "tailorTravel": "Voyages Sur Mesure",
+    "bespokeExp": "Experiences Exclusives",
+    "contact": "Contact",
+    "sendInquiry": "Envoyer une demande",
+    "copyright": "© {{year}} Between Routes. Tous droits reserves.",
+    "tagline": "Voyages Sur Mesure en Chine · Culturel · Affaires · Exclusif"
+  },
+  "culturalPage": {
+    "badge": "Voyages Culturels en Chine",
+    "title": "Explorez la Chine a travers la culture, pas les listes.",
+    "subtitle": "Des montagnes de the et la medecine traditionnelle a l'artisanat local et aux rituels plus lents, ces voyages sont concus pour les voyageurs qui veulent une facon plus profonde et reflechie de decouvrir la Chine.",
+    "sectionLabel": "Ce qui est inclus",
+    "sectionTitle": "Voyages culturels avec plus de profondeur.",
+    "p1": "Nos voyages culturels vont au-dela du tourisme classique. Ils sont construits autour du contexte, du rythme et de rencontres locales significatives.",
+    "p2": "Selon vos interets, un itineraire peut inclure la culture du the, la medecine traditionnelle chinoise, les traditions culinaires, les villes patrimoniales, l'artisanat, l'architecture ou les scenes culturelles modernes dans des villes comme Shanghai et Shenzhen.",
+    "p3": "Chaque voyage est facon autour de ce que vous voulez comprendre, pas seulement ce que vous voulez voir.",
+    "feature1": "Voyages culture du the a Hangzhou, Wuyi ou Yunnan",
+    "feature2": "Medecine traditionnelle chinoise et voyages bien-etre",
+    "feature3": "Artisanat, patrimoine, gastronomie et experiences locales plus lentes",
+    "ideasLabel": "Idees de voyage",
+    "ideasTitle": "Quelques points de depart culturels.",
+    "idea1": {
+      "title": "The et Paysages de Montagne",
+      "desc": "Voyage lent a travers les regions productrices de the, degustations, sejours locaux et rituels culturels lies au paysage et a l'artisanat."
+    },
+    "idea2": {
+      "title": "Bien-etre et Sagesse Chinoise",
+      "desc": "Un itineraire facon autour du mouvement, de l'equilibre, des rituels quotidiens, des pratiques de bien-etre chinoises et d'un rythme restaurateur."
+    },
+    "idea3": {
+      "title": "Patrimoine et Vie Locale",
+      "desc": "Villes historiques, architecture, artisanat et traditions culinaires abordes avec plus d'intimite et moins de precipitation."
+    },
+    "formLabel": "Commencez votre voyage",
+    "formTitle": "Dites-nous quel type de voyage culturel vous recherchez.",
+    "formSubtitle": "Partagez vos interets, villes et dates, et nous vous repondrons avec la prochaine etape appropriee.",
+    "detailsPlaceholder": "Dites-nous en plus sur vos interets",
+    "seo": {
+      "title": "Voyages Culturels en Chine – The, Patrimoine et Experiences Locales | Between Routes",
+      "description": "Explorez la Chine a travers la culture du the, la medecine traditionnelle, l'artisanat et le patrimoine. Voyages culturels sur mesure concus avec profondeur."
+    }
+  },
+  "businessPage": {
+    "badge": "Visites d'Affaires et Industrielles",
+    "title": "Voyages en Chine concus autour d'objectifs d'affaires.",
+    "subtitle": "Pour fondateurs, acheteurs, equipes, investisseurs et partenaires cherchant a comprendre fournisseurs, industries, foires commerciales ou le marche sur le terrain.",
+    "sectionLabel": "Ce que nous organisons",
+    "sectionTitle": "Accompagnement pratique pour les voyages d'affaires en Chine.",
+    "p1": "Nous aidons a facon des visites d'affaires plus claires, plus ciblees et plus faciles a executer.",
+    "p2": "Cela peut inclure des visites d'usines, des reunions fournisseurs, des itineraires de sourcing, une immersion dans le marche, la planification de villes, un support de traduction ou la combinaison de foires avec des visites plus ciblees.",
+    "p3": "L'objectif n'est pas simplement de suivre un programme, mais de rendre le voyage plus utile et mieux concu.",
+    "feature1": "Visites d'usines et de fournisseurs",
+    "feature2": "Accompagnement foires commerciales et sourcing",
+    "feature3": "Itineraires d'affaires concus autour de votre objectif",
+    "casesLabel": "Cas d'usage typiques",
+    "casesTitle": "Quelques formats de visite d'affaires.",
+    "case1": {
+      "title": "Voyages Sourcing et Fournisseurs",
+      "desc": "Concus pour les marques, acheteurs et fondateurs qui ont besoin d'itineraires efficaces entre usines, clusters et reunions."
+    },
+    "case2": {
+      "title": "Extensions de Foires Commerciales",
+      "desc": "Allez au-dela de la foire avec des visites de sites, des reunions de suivi et une coordination entre les villes."
+    },
+    "case3": {
+      "title": "Visites d'Immersion Marche",
+      "desc": "Pour les equipes qui veulent comprendre le retail, les operations, la fabrication ou les ecosystemes design en Chine."
+    },
+    "formLabel": "Commencez votre voyage",
+    "formTitle": "Dites-nous quel type de visite d'affaires vous recherchez.",
+    "formSubtitle": "Partagez votre objectif, villes et dates, et nous vous repondrons avec la prochaine etape appropriee.",
+    "detailsPlaceholder": "Dites-nous en plus sur votre objectif",
+    "seo": {
+      "title": "Visites d'Affaires et Industrielles en Chine – Visites d'Usines, Voyages Sourcing | Between Routes",
+      "description": "Voyages d'affaires en Chine pour fondateurs, acheteurs et equipes. Visites d'usines, itineraires de sourcing, accompagnement Foire de Canton et voyages d'immersion marche."
+    }
+  },
+  "tailorPage": {
+    "badge": "Voyages Sur Mesure en Chine",
+    "title": "Voyager en Chine selon votre facon de bouger.",
+    "subtitle": "Ni un circuit fixe, ni un itineraire generique — mais un parcours concu autour de vos interets, votre rythme, vos priorites et votre objectif.",
+    "sectionLabel": "Comment ca marche",
+    "sectionTitle": "Plus personnel qu'un forfait.",
+    "p1": "Le voyage sur mesure commence par le voyageur. Nous partons de vos interets, dates, villes, niveau de confort et du type d'experience que vous souhaitez vivre.",
+    "p2": "Certains itineraires privilegient la culture, d'autres la gastronomie, d'autres la nature ou les villes modernes. Certains avancent lentement ; d'autres sont structures autour de reunions ou de destinations multiples.",
+    "p3": "L'idee n'est pas de vous faire entrer dans un modele, mais de concevoir un itineraire qui a vraiment du sens pour vous.",
+    "feature1": "Rythme flexible et combinaisons de villes",
+    "feature2": "Voyage facon autour de vos interets et objectifs",
+    "feature3": "Un itineraire plus reflechi, pas un forfait unique",
+    "stylesLabel": "Styles de voyage",
+    "stylesTitle": "Differents rythmes, differents itineraires.",
+    "style1": {
+      "title": "Voyage Culturel",
+      "desc": "Construit autour du the, du patrimoine, du design, de la gastronomie, des traditions locales et d'une immersion plus lente."
+    },
+    "style2": {
+      "title": "Routes Villes et Chine Moderne",
+      "desc": "Pour les voyageurs interesses par le design, l'innovation, l'architecture et la culture urbaine."
+    },
+    "style3": {
+      "title": "Voyages Multi-objectifs",
+      "desc": "Des itineraires qui combinent voyage, apprentissage, reunions, sourcing ou d'autres objectifs specifiques."
+    },
+    "formLabel": "Commencez votre voyage",
+    "formTitle": "Dites-nous comment vous voulez voyager en Chine.",
+    "formSubtitle": "Partagez vos interets, villes et dates, et nous concevrons la prochaine etape appropriee.",
+    "detailsPlaceholder": "Dites-nous en plus sur votre itineraire ideal",
+    "seo": {
+      "title": "Voyages Sur Mesure en Chine – Itineraires Personnalises et Tours Prives | Between Routes",
+      "description": "Chaque voyage en Chine concu autour de vos interets, votre rythme et votre objectif. Pas de forfaits fixes — voyages prives en Chine concus avec soin."
+    }
+  },
+  "bespokePage": {
+    "badge": "Experiences Exclusives",
+    "title": "Des facons plus distinctives de decouvrir la Chine.",
+    "subtitle": "Pour les voyageurs ou equipes qui cherchent quelque chose de plus prive, plus reflechi et moins standard que ce que la plupart des itineraires proposent.",
+    "sectionLabel": "Ce que signifie exclusif",
+    "sectionTitle": "Cure autour de la rarete, de l'acces et de l'intention.",
+    "p1": "Les experiences exclusives sont pour les demandes qui vont au-dela d'un itineraire de voyage ou d'affaires standard.",
+    "p2": "Cela peut signifier des rencontres culturelles plus privees, des moments plus soigneusement orchestres, ou des voyages concus autour d'un objectif, d'un theme ou d'un public tres specifique.",
+    "p3": "L'accent est mis sur la pertinence, la qualite et le soin — pas sur l'echelle.",
+    "feature1": "Rencontres culturelles privees",
+    "feature2": "Moments cures concus autour d'un brief specifique",
+    "feature3": "Concepts de voyage et de projet necessitant plus de flexibilite et de discretion",
+    "directionsLabel": "Directions possibles",
+    "directionsTitle": "Quelques possibilites exclusives.",
+    "direction1": {
+      "title": "Acces Culturel Prive",
+      "desc": "Experiences concues autour de formes plus intimes, plus calmes et plus exclusives d'engagement culturel."
+    },
+    "direction2": {
+      "title": "Voyages d'Interet Special",
+      "desc": "Itineraires construits autour d'un theme, d'une passion, d'un sujet de niche ou d'un type specifique de public."
+    },
+    "direction3": {
+      "title": "Design de Voyage Haut de Gamme",
+      "desc": "Pour les voyages ou le sequencement, la discretion, la qualite et le design d'experience comptent plus que le volume."
+    },
+    "formLabel": "Commencez votre voyage",
+    "formTitle": "Dites-nous quel type d'experience exclusive vous avez en tete.",
+    "formSubtitle": "Partagez votre idee, villes et dates, et nous vous repondrons avec la prochaine etape appropriee.",
+    "detailsPlaceholder": "Dites-nous en plus sur votre idee",
+    "seo": {
+      "title": "Experiences Exclusives en Chine – Voyages Prives et Cures | Between Routes",
+      "description": "Rencontres culturelles privees, voyages d'interet special et design de voyage haut de gamme en Chine. Pour ceux qui veulent quelque chose de plus distinctif qu'un itineraire standard."
+    }
+  },
+  "seo": {
+    "homeTitle": "Between Routes – Voyages Sur Mesure en Chine | Voyages Culturels et d'Affaires",
+    "homeDescription": "Between Routes concoit des experiences de voyage reflechies en Chine pour amateurs de culture et voyageurs d'affaires. Voyages culturels, visites d'affaires, voyages sur mesure et experiences exclusives en Chine.",
+    "ogTitle": "Between Routes – Voyages Sur Mesure en Chine | Voyages Culturels et d'Affaires",
+    "ogDescription": "Between Routes concoit des voyages reflechis en Chine pour amateurs de culture et voyageurs d'affaires. Voyages culturels, visites d'affaires et experiences exclusives."
+  }
+}

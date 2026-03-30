@@ -1,0 +1,278 @@
+{
+  "nav": {
+    "services": "Services",
+    "journeys": "Journeys",
+    "approach": "Approach",
+    "about": "About",
+    "contact": "Contact",
+    "backToHome": "← Back to Home"
+  },
+  "hero": {
+    "badge": "Cultural Journeys · Business Visits · Bespoke Experiences",
+    "title": "China journeys, designed around your purpose.",
+    "subtitle": "From cultural immersion and business visits to tailor-made travel and bespoke experiences, we design more thoughtful ways into China.",
+    "cta": "Start Your Journey",
+    "explore": "Explore Journeys",
+    "scrollDown": "Explore"
+  },
+  "services": {
+    "label": "Services",
+    "title": "Different ways into China, depending on what you need.",
+    "subtitle": "Start with one direction and we can tailor the rest.",
+    "explore": "Explore",
+    "cultural": {
+      "title": "Cultural Journeys in China",
+      "desc": "Explore China through tea culture, traditional medicine, heritage, and slower local experiences beyond typical travel routes."
+    },
+    "business": {
+      "title": "Business & Industry Visits",
+      "desc": "Engage with China through curated factory visits, sourcing trips, market immersion, and business-focused travel support."
+    },
+    "tailor": {
+      "title": "Tailor-made China Travel",
+      "desc": "Every journey is designed around your interests, pace, priorities, and purpose — with no fixed itineraries."
+    },
+    "bespoke": {
+      "title": "Bespoke Experiences",
+      "desc": "Access more distinctive moments in China, from private cultural encounters to carefully curated experiences not open to most travelers."
+    }
+  },
+  "journeys": {
+    "label": "Starting Points",
+    "title": "A few ways to begin.",
+    "subtitle": "These are examples, not fixed packages. Every route can be adapted.",
+    "exploreRoute": "Explore this route",
+    "tea": {
+      "title": "Tea & Mountain Retreats",
+      "place": "Hangzhou · Wuyi · Yunnan",
+      "desc": "A slower journey through tea, landscape, and local craft."
+    },
+    "wellness": {
+      "title": "Wellness & Chinese Wisdom",
+      "place": "Shanghai · Hangzhou · Chengdu",
+      "desc": "A softer way into Chinese wellness, movement, and daily rituals."
+    },
+    "modern": {
+      "title": "Modern China for Curious Minds",
+      "place": "Shanghai · Shenzhen · Suzhou",
+      "desc": "Design, innovation, manufacturing, and urban culture in one route."
+    },
+    "businessRoutes": {
+      "title": "Business Routes with Purpose",
+      "place": "Canton Fair · Yiwu · Factory Clusters",
+      "desc": "Focused trips for buyers, founders, and teams with clear business goals."
+    }
+  },
+  "approach": {
+    "label": "How It Works",
+    "title": "Simple and tailored.",
+    "step1": {
+      "num": "01",
+      "title": "Tell us your goal",
+      "desc": "Culture, business, learning, sourcing, or a more personal interest."
+    },
+    "step2": {
+      "num": "02",
+      "title": "We shape the route",
+      "desc": "Cities, pacing, meetings, stays, and experiences built around your objective."
+    },
+    "step3": {
+      "num": "03",
+      "title": "We help make it happen",
+      "desc": "With practical coordination before and during the journey."
+    }
+  },
+  "about": {
+    "label": "About Between Routes",
+    "title": "A more thoughtful way into China.",
+    "p1": "Between Routes is built for people who want more than a standard itinerary — travelers with a real purpose, whether cultural, professional, or personal.",
+    "p2": "We combine local coordination with a more curated, flexible approach — so each experience feels relevant, useful, and well designed.",
+    "p3": "Whether cultural or business-led, the route starts with your objective. We work with small groups and individuals who value depth over volume.",
+    "stat1": "Tailor-made",
+    "stat2": "Service types",
+    "stat3": "Coordination"
+  },
+  "contact": {
+    "label": "Inquiries",
+    "title": "Let's plan your route.",
+    "subtitle": "Share a few details and we'll come back with the right next step.",
+    "responseTime": "We typically respond within 24 hours",
+    "name": "Name",
+    "company": "Company",
+    "email": "Email",
+    "whatsapp": "WhatsApp",
+    "objective": "What are you looking for?",
+    "cities": "Preferred cities",
+    "timing": "Dates / timeframe",
+    "details": "Tell us more",
+    "submit": "Start Your Journey",
+    "sending": "Sending...",
+    "success": "Thanks — your inquiry has been sent.",
+    "error": "Something went wrong. Please try again.",
+    "options": {
+      "cultural": "Cultural journey",
+      "business": "Business & industry visit",
+      "tailor": "Tailor-made China travel",
+      "bespoke": "Bespoke experience",
+      "unsure": "Not sure yet"
+    }
+  },
+  "footer": {
+    "desc": "Tailored China experiences for culture seekers, business travelers, and anyone who wants a more thoughtful way in.",
+    "services": "Services",
+    "culturalJourneys": "Cultural Journeys",
+    "businessVisits": "Business Visits",
+    "tailorTravel": "Tailor-made Travel",
+    "bespokeExp": "Bespoke Experiences",
+    "contact": "Contact",
+    "sendInquiry": "Send an inquiry",
+    "copyright": "© {{year}} Between Routes. All rights reserved.",
+    "tagline": "Tailored China Journeys · Cultural · Business · Bespoke"
+  },
+  "culturalPage": {
+    "badge": "Cultural Journeys in China",
+    "title": "Explore China through culture, not checklists.",
+    "subtitle": "From tea mountains and traditional medicine to local craft and slower rituals, these journeys are designed for travelers who want a deeper, more thoughtful way into China.",
+    "sectionLabel": "What this includes",
+    "sectionTitle": "Cultural travel with more depth.",
+    "p1": "Our cultural journeys go beyond sightseeing. They are built around context, pacing, and meaningful local encounters.",
+    "p2": "Depending on your interests, a route might include tea culture, traditional Chinese medicine, food traditions, heritage towns, crafts, architecture, or modern cultural scenes in cities like Shanghai and Shenzhen.",
+    "p3": "Each trip is shaped around what you want to understand, not just what you want to see.",
+    "feature1": "Tea culture journeys in Hangzhou, Wuyi, or Yunnan",
+    "feature2": "Traditional Chinese medicine and wellness-led travel",
+    "feature3": "Craft, heritage, food, and slower local experiences",
+    "ideasLabel": "Journey ideas",
+    "ideasTitle": "A few cultural starting points.",
+    "idea1": {
+      "title": "Tea & Mountain Landscapes",
+      "desc": "Slow travel through tea-growing regions, tastings, local stays, and cultural rituals tied to landscape and craft."
+    },
+    "idea2": {
+      "title": "Wellness & Chinese Wisdom",
+      "desc": "A route shaped around movement, balance, daily rituals, Chinese wellness practices, and restorative pacing."
+    },
+    "idea3": {
+      "title": "Heritage & Local Life",
+      "desc": "Historic towns, architecture, crafts, and food traditions approached with more intimacy and less rush."
+    },
+    "formLabel": "Start Your Journey",
+    "formTitle": "Tell us what kind of cultural journey you're looking for.",
+    "formSubtitle": "Share your interests, cities, and timing, and we'll come back with the right next step.",
+    "detailsPlaceholder": "Tell us more about your interests",
+    "seo": {
+      "title": "Cultural Journeys in China – Tea, Heritage & Local Experiences | Between Routes",
+      "description": "Explore China through tea culture, traditional medicine, craft, and heritage. Tailor-made cultural journeys in China designed around depth, not checklists."
+    }
+  },
+  "businessPage": {
+    "badge": "Business & Industry Visits",
+    "title": "China trips designed around business purpose.",
+    "subtitle": "For founders, buyers, teams, investors, and partners looking to understand suppliers, industries, trade fairs, or the market on the ground.",
+    "sectionLabel": "What we arrange",
+    "sectionTitle": "Practical support for business travel in China.",
+    "p1": "We help shape business visits that are clearer, more focused, and easier to execute.",
+    "p2": "This may include factory visits, supplier meetings, sourcing routes, market immersion, city planning, translation support, or combining trade fairs with more targeted site visits.",
+    "p3": "The goal is not just to move through a schedule, but to make the trip more useful and better designed.",
+    "feature1": "Factory and supplier visits",
+    "feature2": "Trade fair and sourcing support",
+    "feature3": "Business travel routes shaped around your objective",
+    "casesLabel": "Typical use cases",
+    "casesTitle": "A few business visit formats.",
+    "case1": {
+      "title": "Sourcing & Supplier Trips",
+      "desc": "Built for brands, buyers, and founders who need efficient routes across factories, clusters, and meetings."
+    },
+    "case2": {
+      "title": "Trade Fair Extensions",
+      "desc": "Go beyond the fair itself with site visits, follow-up meetings, and city-to-city coordination."
+    },
+    "case3": {
+      "title": "Market Immersion Visits",
+      "desc": "For teams who want to understand retail, operations, manufacturing, or design ecosystems in China."
+    },
+    "formLabel": "Start Your Journey",
+    "formTitle": "Tell us what kind of business visit you need.",
+    "formSubtitle": "Share your objective, cities, and timing, and we'll come back with the right next step.",
+    "detailsPlaceholder": "Tell us more about your objective",
+    "seo": {
+      "title": "China Business & Industry Visits – Factory Tours, Sourcing Trips | Between Routes",
+      "description": "Curated China business travel for founders, buyers, and teams. Factory visits, sourcing routes, Canton Fair support, and market immersion trips designed around your objective."
+    }
+  },
+  "tailorPage": {
+    "badge": "Tailor-made China Travel",
+    "title": "China travel built around the way you want to move.",
+    "subtitle": "Not a fixed tour, not a generic itinerary — but a route designed around your interests, pacing, priorities, and purpose.",
+    "sectionLabel": "How it works",
+    "sectionTitle": "More personal than a package.",
+    "p1": "Tailor-made travel starts with the traveler. We begin with your interests, timing, cities, comfort level, and the kind of experience you want to have.",
+    "p2": "Some routes lean into culture, some into food, some into nature or modern cities. Some move slowly; others are tightly structured around meetings or multiple destinations.",
+    "p3": "The point is not to fit you into a template, but to design a route that actually makes sense for you.",
+    "feature1": "Flexible pacing and city combinations",
+    "feature2": "Travel shaped around your interests and goals",
+    "feature3": "A more considered route, not a one-size-fits-all package",
+    "stylesLabel": "Travel styles",
+    "stylesTitle": "Different rhythms, different routes.",
+    "style1": {
+      "title": "Culture-led Travel",
+      "desc": "Built around tea, heritage, design, food, local traditions, and slower immersion."
+    },
+    "style2": {
+      "title": "City & Modern China Routes",
+      "desc": "For travelers interested in design, innovation, architecture, and urban culture."
+    },
+    "style3": {
+      "title": "Mixed-purpose Journeys",
+      "desc": "Routes that combine travel, learning, meetings, sourcing, or other specific goals."
+    },
+    "formLabel": "Start Your Journey",
+    "formTitle": "Tell us how you want to travel through China.",
+    "formSubtitle": "Share your interests, cities, and timing, and we'll shape the right next step.",
+    "detailsPlaceholder": "Tell us more about your ideal route",
+    "seo": {
+      "title": "Tailor-Made China Travel – Custom Itineraries & Private Tours | Between Routes",
+      "description": "Every China journey built around your interests, pace, and purpose. No fixed packages — thoughtfully designed private China travel for independent travelers and groups."
+    }
+  },
+  "bespokePage": {
+    "badge": "Bespoke Experiences",
+    "title": "More distinctive ways into China.",
+    "subtitle": "For travelers or teams looking for something more private, more considered, and less standard than what most itineraries can offer.",
+    "sectionLabel": "What bespoke means",
+    "sectionTitle": "Curated around rarity, access, and intention.",
+    "p1": "Bespoke experiences are for requests that go beyond a standard travel or business route.",
+    "p2": "That might mean more private cultural encounters, more carefully staged moments, or journeys shaped around a very specific objective, theme, or audience.",
+    "p3": "The focus is on relevance, quality, and thoughtfulness — not scale.",
+    "feature1": "Private cultural encounters",
+    "feature2": "Curated moments designed around a specific brief",
+    "feature3": "Travel and project concepts that need more flexibility and discretion",
+    "directionsLabel": "Possible directions",
+    "directionsTitle": "A few bespoke possibilities.",
+    "direction1": {
+      "title": "Private Cultural Access",
+      "desc": "Experiences designed around smaller, quieter, more exclusive forms of cultural engagement."
+    },
+    "direction2": {
+      "title": "Special-interest Journeys",
+      "desc": "Routes built around a theme, a passion, a niche subject, or a specific kind of audience."
+    },
+    "direction3": {
+      "title": "High-touch Travel Design",
+      "desc": "For journeys where sequencing, discretion, quality, and experience design matter more than volume."
+    },
+    "formLabel": "Start Your Journey",
+    "formTitle": "Tell us what kind of bespoke experience you have in mind.",
+    "formSubtitle": "Share your idea, cities, and timing, and we'll come back with the right next step.",
+    "detailsPlaceholder": "Tell us more about your idea",
+    "seo": {
+      "title": "Bespoke China Experiences – Private & Curated Travel | Between Routes",
+      "description": "Private cultural encounters, special-interest journeys, and high-touch travel design in China. For those who want something more distinctive than a standard itinerary."
+    }
+  },
+  "seo": {
+    "homeTitle": "Between Routes – Tailored China Journeys | Cultural & Business Travel",
+    "homeDescription": "Between Routes designs thoughtful China travel experiences for culture seekers and business travelers. Cultural journeys, business visits, tailor-made travel, and bespoke experiences in China.",
+    "ogTitle": "Between Routes – Tailored China Journeys | Cultural & Business Travel",
+    "ogDescription": "Between Routes designs thoughtful China travel for culture seekers and business travelers. Cultural journeys, business visits, and bespoke experiences."
+  }
+}
