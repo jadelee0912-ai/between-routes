@@ -15,3 +15,28 @@ html {
   opacity: 1;
   transform: none;
 }
+
+/* Warm section gradients */
+.bg-warm-light {
+  background: linear-gradient(180deg, #faf8f5 0%, #f5f0ea 100%);
+}
+
+.bg-warm-white {
+  background: linear-gradient(180deg, #ffffff 0%, #fdfbf8 100%);
+}
+
+/* Gold accent line for cards */
+.accent-top {
+  position: relative;
+  overflow: hidden;
+}
+.accent-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 24px;
+  right: 24px;
+  height: 2px;
+  background: linear-gradient(90deg, #b8860b, #d4a843, #b8860b);
+  border-radius: 0 0 2px 2px;
+}

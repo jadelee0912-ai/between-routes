@@ -131,7 +131,7 @@ export default function BetweenRoutesWebsite() {
   const canonicalUrl = `${baseUrl}${currentPath}`;
 
   return (
-    <div className="min-h-screen bg-stone-50 text-stone-900">
+    <div className="min-h-screen bg-warm-light text-stone-900">
       <Helmet>
         <html lang={i18n.language} />
         <title>{t("seo.homeTitle")}</title>
@@ -223,10 +223,10 @@ export default function BetweenRoutesWebsite() {
                 {t("hero.subtitle")}
               </p>
               <div className="mt-8 flex flex-wrap gap-4">
-                <a href="#contact" className="rounded-2xl bg-white px-6 py-3 text-sm font-medium text-stone-900 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+                <a href="#contact" className="rounded-2xl bg-amber-700 px-6 py-3 text-sm font-medium text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-amber-600 hover:shadow-md">
                   {t("hero.cta")}
                 </a>
-                <a href="#journeys" className="rounded-2xl border border-white/30 bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur transition hover:-translate-y-0.5">
+                <a href="#journeys" className="rounded-2xl border border-white/30 bg-white/10 px-6 py-3 text-sm font-medium text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white/20">
                   {t("hero.explore")}
                 </a>
               </div>
@@ -246,9 +246,9 @@ export default function BetweenRoutesWebsite() {
       </section>
 
       {/* Services */}
-      <section id="services" className="mx-auto max-w-7xl px-6 py-20 md:py-24">
+      <section id="services" className="mx-auto max-w-7xl px-6 py-20 md:py-24" style={{ background: 'transparent' }}>
         <div className="max-w-2xl reveal">
-          <div className="text-sm uppercase tracking-[0.18em] text-stone-500">{t("services.label")}</div>
+          <div className="text-sm uppercase tracking-[0.18em] text-amber-800/70">{t("services.label")}</div>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
             {t("services.title")}
           </h2>
@@ -263,7 +263,7 @@ export default function BetweenRoutesWebsite() {
               <Link
                 key={item.title}
                 to={item.link}
-                className="group relative min-w-[300px] max-w-[300px] snap-start overflow-hidden rounded-[28px] border border-stone-200 bg-white shadow-sm md:min-w-[340px] md:max-w-[340px] transition hover:shadow-md hover:-translate-y-1 duration-300"
+                className="group relative min-w-[300px] max-w-[300px] snap-start overflow-hidden rounded-[28px] border border-stone-200/80 bg-white shadow-sm md:min-w-[340px] md:max-w-[340px] transition hover:shadow-lg hover:-translate-y-1 duration-300 hover:border-amber-200"
               >
                 <div
                   className="h-56 bg-cover bg-center transition duration-500 group-hover:scale-105"
@@ -272,7 +272,7 @@ export default function BetweenRoutesWebsite() {
                 <div className="p-6">
                   <h3 className="text-xl font-medium">{item.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-stone-700">{item.desc}</p>
-                  <div className="mt-4 flex items-center gap-1 text-sm font-medium text-stone-900 group-hover:gap-2 transition-all">
+                  <div className="mt-4 flex items-center gap-1 text-sm font-medium text-amber-800 group-hover:gap-2 group-hover:text-amber-700 transition-all">
                     {t("services.explore")}
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path d="M5 12h14M12 5l7 7-7 7" />
@@ -282,16 +282,16 @@ export default function BetweenRoutesWebsite() {
               </Link>
             ))}
           </div>
-          <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-stone-50 to-transparent" />
+          <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#f5f0ea] to-transparent" />
         </div>
       </section>
 
       {/* Journeys */}
-      <section id="journeys" className="border-y border-stone-200 bg-white">
+      <section id="journeys" className="border-y border-amber-100/60 bg-warm-white">
         <div className="mx-auto max-w-7xl px-6 py-20 md:py-24">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between reveal">
             <div className="max-w-2xl">
-              <div className="text-sm uppercase tracking-[0.18em] text-stone-500">{t("journeys.label")}</div>
+              <div className="text-sm uppercase tracking-[0.18em] text-amber-800/70">{t("journeys.label")}</div>
               <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">{t("journeys.title")}</h2>
             </div>
             <p className="max-w-xl text-sm leading-7 text-stone-700 md:text-base">
@@ -305,7 +305,7 @@ export default function BetweenRoutesWebsite() {
                 <Link
                   key={item.title}
                   to={item.link}
-                  className="group relative min-w-[320px] max-w-[320px] snap-start overflow-hidden rounded-[30px] border border-stone-200 bg-white shadow-sm md:min-w-[420px] md:max-w-[420px] transition hover:shadow-md hover:-translate-y-1 duration-300"
+                  className="group relative min-w-[320px] max-w-[320px] snap-start overflow-hidden rounded-[30px] border border-stone-200/80 bg-white shadow-sm md:min-w-[420px] md:max-w-[420px] transition hover:shadow-lg hover:-translate-y-1 duration-300"
                 >
                   <div
                     className="relative h-[420px] bg-cover bg-center transition duration-500 group-hover:scale-105"
@@ -327,7 +327,7 @@ export default function BetweenRoutesWebsite() {
                 </Link>
               ))}
             </div>
-            <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-white to-transparent" />
+            <div className="pointer-events-none absolute right-0 top-0 h-full w-20 bg-gradient-to-l from-[#fdfbf8] to-transparent" />
           </div>
         </div>
       </section>
@@ -335,7 +335,7 @@ export default function BetweenRoutesWebsite() {
       {/* How it works */}
       <section id="approach" className="mx-auto max-w-7xl px-6 py-20 md:py-24">
         <div className="max-w-2xl reveal">
-          <div className="text-sm uppercase tracking-[0.18em] text-stone-500">{t("approach.label")}</div>
+          <div className="text-sm uppercase tracking-[0.18em] text-amber-800/70">{t("approach.label")}</div>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">{t("approach.title")}</h2>
         </div>
 
@@ -343,10 +343,10 @@ export default function BetweenRoutesWebsite() {
           {steps.map((step, i) => (
             <div
               key={step.num}
-              className="reveal rounded-[28px] border border-stone-200 bg-white p-8 shadow-sm"
+              className="reveal accent-top rounded-[28px] border border-stone-200/80 bg-white p-8 shadow-sm hover:shadow-md transition-shadow duration-300"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="text-4xl font-semibold tracking-tight text-stone-300">{step.num}</div>
+              <div className="text-4xl font-semibold tracking-tight text-amber-700/70">{step.num}</div>
               <h3 className="mt-5 text-xl font-medium">{step.title}</h3>
               <p className="mt-4 text-sm leading-7 text-stone-700">{step.desc}</p>
             </div>
@@ -355,7 +355,7 @@ export default function BetweenRoutesWebsite() {
       </section>
 
       {/* About */}
-      <section id="about" className="relative overflow-hidden border-y border-stone-200 bg-stone-900 text-white">
+      <section id="about" className="relative overflow-hidden border-y border-amber-900/20 bg-stone-900 text-white">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1561031454-4f1331bd2a34?auto=format&fit=crop&w=1600&q=80')" }}
@@ -369,17 +369,17 @@ export default function BetweenRoutesWebsite() {
             <p>{t("about.p1")}</p>
             <p>{t("about.p2")}</p>
             <p>{t("about.p3")}</p>
-            <div className="mt-6 pt-6 border-t border-white/10 grid grid-cols-3 gap-6 text-center">
+            <div className="mt-6 pt-6 border-t border-amber-500/20 grid grid-cols-3 gap-6 text-center">
               <div>
-                <div className="text-2xl font-semibold">100%</div>
+                <div className="text-2xl font-semibold text-amber-400">100%</div>
                 <div className="mt-1 text-xs uppercase tracking-widest text-white/60">{t("about.stat1")}</div>
               </div>
               <div>
-                <div className="text-2xl font-semibold">4</div>
+                <div className="text-2xl font-semibold text-amber-400">4</div>
                 <div className="mt-1 text-xs uppercase tracking-widest text-white/60">{t("about.stat2")}</div>
               </div>
               <div>
-                <div className="text-2xl font-semibold">Local</div>
+                <div className="text-2xl font-semibold text-amber-400">Local</div>
                 <div className="mt-1 text-xs uppercase tracking-widest text-white/60">{t("about.stat3")}</div>
               </div>
             </div>
@@ -391,7 +391,7 @@ export default function BetweenRoutesWebsite() {
       <section id="contact" className="mx-auto max-w-7xl px-6 py-20 md:py-24">
         <div className="grid gap-10 md:grid-cols-[0.95fr_1.05fr] md:items-start">
           <div className="reveal">
-            <div className="text-sm uppercase tracking-[0.18em] text-stone-500">{t("contact.label")}</div>
+            <div className="text-sm uppercase tracking-[0.18em] text-amber-800/70">{t("contact.label")}</div>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">{t("contact.title")}</h2>
             <p className="mt-5 max-w-lg text-base leading-8 text-stone-700 md:text-lg">
               {t("contact.subtitle")}
@@ -410,31 +410,39 @@ export default function BetweenRoutesWebsite() {
                 <span>{t("contact.responseTime")}</span>
               </div>
             </div>
+            <div className="mt-6 flex items-center gap-4">
+              <a href="https://www.facebook.com/profile.php?id=61578430649784" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 rounded-full bg-stone-100 text-stone-500 hover:bg-amber-50 hover:text-amber-700 transition" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/betweenrouteschina" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-10 h-10 rounded-full bg-stone-100 text-stone-500 hover:bg-amber-50 hover:text-amber-700 transition" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              </a>
+            </div>
           </div>
 
           <form className="reveal rounded-[32px] border border-stone-200 bg-white p-8 shadow-sm" onSubmit={handleSubmit}>
             <div className="grid gap-5 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm font-medium text-stone-700">{t("contact.name")}</label>
-                <input type="text" name="name" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
+                <input type="text" name="name" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-amber-700 transition" />
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-stone-700">{t("contact.company")}</label>
-                <input type="text" name="company" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
+                <input type="text" name="company" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-amber-700 transition" />
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-stone-700">{t("contact.email")}</label>
-                <input type="email" name="email" required className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
+                <input type="email" name="email" required className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-amber-700 transition" />
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-stone-700">{t("contact.whatsapp")}</label>
-                <input type="text" name="whatsapp" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
+                <input type="text" name="whatsapp" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-amber-700 transition" />
               </div>
             </div>
 
             <div className="mt-5">
               <label className="mb-2 block text-sm font-medium text-stone-700">{t("contact.objective")}</label>
-              <select name="objective" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition">
+              <select name="objective" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-amber-700 transition">
                 <option>{t("contact.options.cultural")}</option>
                 <option>{t("contact.options.business")}</option>
                 <option>{t("contact.options.tailor")}</option>
@@ -446,20 +454,20 @@ export default function BetweenRoutesWebsite() {
             <div className="mt-5 grid gap-5 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-sm font-medium text-stone-700">{t("contact.cities")}</label>
-                <input type="text" name="cities" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
+                <input type="text" name="cities" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-amber-700 transition" />
               </div>
               <div>
                 <label className="mb-2 block text-sm font-medium text-stone-700">{t("contact.timing")}</label>
-                <input type="text" name="timing" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
+                <input type="text" name="timing" className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-amber-700 transition" />
               </div>
             </div>
 
             <div className="mt-5">
               <label className="mb-2 block text-sm font-medium text-stone-700">{t("contact.details")}</label>
-              <textarea name="details" rows={5} className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-stone-900 transition" />
+              <textarea name="details" rows={5} className="w-full rounded-2xl border border-stone-300 px-4 py-3 outline-none focus:border-amber-700 transition" />
             </div>
 
-            <button type="submit" className="mt-6 rounded-2xl bg-stone-900 px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-stone-800">
+            <button type="submit" className="mt-6 rounded-2xl bg-amber-700 px-6 py-3 text-sm font-medium text-white transition hover:-translate-y-0.5 hover:bg-amber-600 hover:shadow-md">
               {t("contact.submit")}
             </button>
             {status && <p className="mt-4 text-sm text-stone-600">{status}</p>}
@@ -468,33 +476,41 @@ export default function BetweenRoutesWebsite() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-stone-200 bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-10">
+      <footer className="border-t border-stone-200 bg-stone-900 text-white">
+        <div className="mx-auto max-w-7xl px-6 py-12">
           <div className="grid gap-8 md:grid-cols-[1.5fr_1fr_1fr]">
             <div>
-              <img src="/logo-dark.png" alt="Between Routes" className="h-10 w-auto object-contain" />
-              <p className="mt-4 text-sm leading-7 text-stone-600 max-w-xs">
+              <img src="/logo-white.png" alt="Between Routes" className="h-10 w-auto object-contain" />
+              <p className="mt-4 text-sm leading-7 text-white/60 max-w-xs">
                 {t("footer.desc")}
               </p>
+              <div className="mt-5 flex items-center gap-3">
+                <a href="https://www.facebook.com/profile.php?id=61578430649784" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-9 h-9 rounded-full bg-white/10 text-white/60 hover:bg-amber-700 hover:text-white transition" aria-label="Facebook">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/betweenrouteschina" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-9 h-9 rounded-full bg-white/10 text-white/60 hover:bg-amber-700 hover:text-white transition" aria-label="Instagram">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+              </div>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">{t("footer.services")}</div>
-              <nav className="flex flex-col gap-2 text-sm text-stone-600">
-                <Link to={lp("/china-cultural-journeys")} className="hover:text-stone-900 transition">{t("footer.culturalJourneys")}</Link>
-                <Link to={lp("/china-business-visits")} className="hover:text-stone-900 transition">{t("footer.businessVisits")}</Link>
-                <Link to={lp("/tailor-made-china-travel")} className="hover:text-stone-900 transition">{t("footer.tailorTravel")}</Link>
-                <Link to={lp("/bespoke-experiences-china")} className="hover:text-stone-900 transition">{t("footer.bespokeExp")}</Link>
+              <div className="text-xs uppercase tracking-widest text-amber-500/80 mb-3">{t("footer.services")}</div>
+              <nav className="flex flex-col gap-2 text-sm text-white/60">
+                <Link to={lp("/china-cultural-journeys")} className="hover:text-white transition">{t("footer.culturalJourneys")}</Link>
+                <Link to={lp("/china-business-visits")} className="hover:text-white transition">{t("footer.businessVisits")}</Link>
+                <Link to={lp("/tailor-made-china-travel")} className="hover:text-white transition">{t("footer.tailorTravel")}</Link>
+                <Link to={lp("/bespoke-experiences-china")} className="hover:text-white transition">{t("footer.bespokeExp")}</Link>
               </nav>
             </div>
             <div>
-              <div className="text-xs uppercase tracking-widest text-stone-400 mb-3">{t("footer.contact")}</div>
-              <div className="flex flex-col gap-2 text-sm text-stone-600">
-                <a href="#contact" className="hover:text-stone-900 transition">{t("footer.sendInquiry")}</a>
-                <a href="mailto:hello@betweenrouteschina.com" className="text-stone-500 text-xs hover:text-stone-900 transition">hello@betweenrouteschina.com</a>
+              <div className="text-xs uppercase tracking-widest text-amber-500/80 mb-3">{t("footer.contact")}</div>
+              <div className="flex flex-col gap-2 text-sm text-white/60">
+                <a href="#contact" className="hover:text-white transition">{t("footer.sendInquiry")}</a>
+                <a href="mailto:hello@betweenrouteschina.com" className="text-white/40 text-xs hover:text-white transition">hello@betweenrouteschina.com</a>
               </div>
             </div>
           </div>
-          <div className="mt-8 pt-6 border-t border-stone-100 flex flex-col gap-2 md:flex-row md:justify-between text-xs text-stone-400">
+          <div className="mt-8 pt-6 border-t border-white/10 flex flex-col gap-2 md:flex-row md:justify-between text-xs text-white/40">
             <span>{t("footer.copyright", { year: new Date().getFullYear() })}</span>
             <span>{t("footer.tagline")}</span>
           </div>
