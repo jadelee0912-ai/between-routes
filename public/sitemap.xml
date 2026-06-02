@@ -232,4 +232,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Sourcing Chine -> Afrique (French, standalone) -->
+  <url>
+    <loc>https://www.betweenrouteschina.com/sourcing-chine-afrique</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.betweenrouteschina.com/sourcing-chine-afrique" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.betweenrouteschina.com/sourcing-chine-afrique" />
+    <lastmod>2026-06-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
 </urlset>

@@ -5,6 +5,7 @@ import CulturalJourneysPage from "./pages/CulturalJourneysPage";
 import BusinessVisitsPage from "./pages/BusinessVisitsPage";
 import TailorMadeTravelPage from "./pages/TailorMadeTravelPage";
 import BespokeExperiencesPage from "./pages/BespokeExperiencesPage";
+import SourcingPage from "./pages/SourcingPage";
 
 const pages = (
   <>
@@ -20,6 +21,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Standalone French sourcing landing page (Africa → China), outside the i18n wrapper */}
+        <Route path="sourcing-chine-afrique" element={<SourcingPage />} />
         {/* English (default, no prefix) */}
         <Route element={<LanguageWrapper />}>
           {pages}
